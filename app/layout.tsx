@@ -84,8 +84,7 @@ function Footer() {
 			</div>
 
 			<div className="footer-bottom">IEEE EDINBURG STUDENT BRANCH 2026</div>
-		</footer>
-	);
+		</footer>);
 }
 
 export default function RootLayout({
