@@ -26,6 +26,11 @@ body {
 }
 
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000; /* stays above all content */
 	background-color: #002855; /* IEEE dark blue */
 	height: 72px;
 	display: flex;
