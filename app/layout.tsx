@@ -32,7 +32,44 @@ function Header() {
 				<a href="/collaborate">Collaborate</a>
 				<a href="/contact">Contact Us</a>
 			</nav>
-		</div>
+		</div>);
+}
+
+function Footer() {
+	return (
+		<footer className="footer">
+			<div className="footer-container">
+				<div className="footer-logo">
+					<a href="https://ieee.org" target="_blank">
+						<img src="/ieee_mb_white.png" />
+					</a>
+				</div>
+
+				<div className="footer-nav">
+					<a href="/about">About Us</a>
+					<a href="/membership">Membership</a>
+					<a href="/contact">Contact Us</a>
+
+					<a href="/events">Events</a>
+					<a href="/leadership">Leadership</a>
+					<a href="/collaborate">Collaborate</a>
+				</div>
+			</div>
+
+			<div className="footer-socials">
+				<a href="#" aria-label="Discord" className="discord">
+					<img src="discord.svg" alt="Discord" />
+				</a>
+				<a href="#" aria-label="Instagram" className="instagram">
+					<img src="instagram.svg" alt="Instagram" />
+				</a>
+				<a href="#" aria-label="Facebook" className="facebook">
+					<img src="facebook.png" alt="Facebook" />
+				</a>
+			</div>
+
+			<div className="footer-bottom">IEEE EDINBURG STUDENT BRANCH 2026</div>
+		</footer>
 	);
 }
 
@@ -48,6 +85,7 @@ export default function RootLayout({
         <div className="main">
 				  {children}
         </div>
+        <Footer />
 			</body>
 		</html>
 	);
