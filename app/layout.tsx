@@ -39,13 +39,28 @@ function Footer() {
 			</div>
 
 			<div className="footer-socials">
-				<a href="#" aria-label="Discord" className="discord">
+				<a
+					href="https://discord.gg/jMR3z42"
+					target="_blank"
+					aria-label="Discord"
+					className="discord"
+				>
 					<img src="discord.svg" alt="Discord" />
 				</a>
-				<a href="#" aria-label="Instagram" className="instagram">
+				<a
+					href="https://instagram.com/ieee.edinburg"
+					target="_blank"
+					aria-label="Instagram"
+					className="instagram"
+				>
 					<img src="instagram.svg" alt="Instagram" />
 				</a>
-				<a href="#" aria-label="Facebook" className="facebook">
+				<a
+					href="https://www.facebook.com/ieeeedinburg"
+					target="_blank"
+					aria-label="Facebook"
+					className="facebook"
+				>
 					<img src="facebook.png" alt="Facebook" />
 				</a>
 			</div>
