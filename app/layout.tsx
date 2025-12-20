@@ -30,7 +30,7 @@ function Header() {
 				<a href="/membership">Membership</a>
 				<a href="/leadership">Leadership</a>
 				<a href="/collaborate">Collaborate</a>
-				<a href="/contact">Contact</a>
+				<a href="/contact">Contact Us</a>
 			</nav>
 		</div>
 	);
