@@ -25,17 +25,26 @@
 
 .angled_rectangle.yellow {
 	background: var(--yellow);
-	color: var(--blue);
 }
 
 .angled_rectangle.white {
 	background: var(--white);
-	color: var(--blue);
 }
 
 .angled_rectangle.blue {
 	background: var(--blue);
+}
+
+.angled_rectangle.text_yellow {
 	color: var(--yellow);
+}
+
+.angled_rectangle.text_white {
+	color: var(--white);
+}
+
+.angled_rectangle.text_blue {
+	color: var(--blue);
 }
 
 .angled_content {
