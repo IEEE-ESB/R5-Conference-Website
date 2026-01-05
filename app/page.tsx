@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<div>
       <div className={styles.container}>
-        <img src="hero.jpg"/>
+        <img src="hero.jpg" className={styles.container_img}/>
         <a target="_blank" href="https://ieee.org" className={`${styles.centered_link} ${styles.container}`}>
           <img src="/ieee_mb_white.png" />
         </a>
