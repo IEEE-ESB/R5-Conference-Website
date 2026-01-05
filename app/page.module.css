@@ -1,0 +1,20 @@
+.container {
+  position: relative; /* Essential: keeps the link inside the box */
+  display: flex;
+  align-items: center;    /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  width: fit-content;      /* Keeps the container the size of the image */
+}
+
+.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.centered_link {
+  position: absolute; /* Takes the link out of flow to sit on top */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
