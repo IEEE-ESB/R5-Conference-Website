@@ -3,6 +3,9 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
+	--blue: #002855;
+	--yellow: #ffc72c;
+	--white: #fff;
 }
 
 @theme inline {
@@ -47,7 +50,7 @@ body {
 }
 
 .navbar-title {
-	color: #ffffff;
+	color: var(--white);
 	font-size: 30px;
 	/* font-weight: 600; */
 	font-style: italic;
@@ -69,7 +72,7 @@ body {
 }
 
 .navbar-menu a {
-	color: #ffffff;
+	color: var(--white);
 	text-decoration: none;
 	font-size: 18px;
 	font-weight: bolder;
@@ -80,14 +83,17 @@ body {
 }
 
 .navbar-menu a:hover {
-	color: #ffc72c;
+	color: var(--yellow);
 }
 
 .footer {
-	background-color: #062b55;
-	color: #ffffff;
+	background-color: var(--blue);
+	color: var(--white);
 	padding: 60px 80px 24px;
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
 }
 
 .footer-container {
@@ -112,7 +118,7 @@ body {
 }
 
 .footer-nav a {
-	color: #ffffff;
+	color: var(--white);
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.8px;
@@ -120,7 +126,7 @@ body {
 }
 
 .footer-nav a:hover {
-	color: #ffc72c;
+	color: var(--yellow);
 }
 
 /* Social Icons */

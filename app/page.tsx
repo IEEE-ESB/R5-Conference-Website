@@ -11,11 +11,13 @@ export default function Home() {
         </a>
       </div>
       <AngledRectangle>
-        <h1>About Us</h1>
-        <p>
+        <h1 className={styles.title}>About Us</h1>
+        <p className={styles.text}>
           The Institute of Electrical and Electronics Engineers - Edinburg Student Branch (IEEE ESB) is a dynamic, student-run organization dedicated to fostering innovation, leadership, and hands-on experience in engineering and technology.
         </p>
-        <button>Learn More</button>
+        <a className={styles.container} href='/about'>
+          <button className={styles.button}>Learn More</button>
+        </a>
       </AngledRectangle>
     </div>
 	);
