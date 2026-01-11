@@ -1,6 +1,52 @@
 import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
 import styles from "./page.module.css";
 
+function Event() {
+	return (
+		<a href="#" className={styles.event}>
+			<div>
+				<img src="##" />
+				<div>
+					<h3>Title</h3>
+					<p>Description</p>
+					<h3>Time:</h3>
+					<h3>Location:</h3>
+					<h3>Leads:</h3>
+				</div>
+			</div>
+			<img src="#" />
+		</a>
+	);
+}
+
+function EventCard() {
+	return (
+		<div className={styles.eventCard}>
+			<div className={styles.eventImage}>
+				<img src="#" alt="" style={{ objectFit: "cover" }} />
+			</div>
+
+			<div className={styles.eventInfo}>
+				<h2 className={styles.eventTitle}>Test</h2>
+				<p className={styles.eventDescription}>Test</p>
+
+				<div className={styles.eventDetails}>
+					<p>
+						<strong>TIME:</strong>test
+					</p>
+					<p>
+						<strong>LOCATION:</strong> test
+					</p>
+				</div>
+			</div>
+
+			<div className={styles.eventHost}>
+				<img src="#" alt="" style={{ objectFit: "cover" }} />
+			</div>
+		</div>
+	);
+}
+
 export default function Home() {
 	return (
 		<div>
@@ -28,6 +74,11 @@ export default function Home() {
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="white" textColor="blue">
 				<h1>Upcoming Events</h1>
+				<div className={styles.events}>
+					<EventCard />
+					<EventCard />
+					<EventCard />
+				</div>
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Become A Member</h1>

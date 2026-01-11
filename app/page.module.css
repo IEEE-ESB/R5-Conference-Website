@@ -1,52 +1,125 @@
 .container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;           /* Changed from fit-content */
-  overflow: hidden;      /* Prevents any image bleed */
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Changed from fit-content */
+	overflow: hidden; /* Prevents any image bleed */
 }
 
 .container_img {
-  display: block;        /* Removes the tiny gap at the bottom */
-  width: 100%;
-  height: auto;          /* Let aspect-ratio handle the height */
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
+	display: block; /* Removes the tiny gap at the bottom */
+	width: 100%;
+	height: auto; /* Let aspect-ratio handle the height */
+	aspect-ratio: 16 / 7;
+	object-fit: cover;
 }
 
 .centered_link {
-  position: absolute; /* Takes the link out of flow to sit on top */
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+	position: absolute; /* Takes the link out of flow to sit on top */
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .centered_link img {
-  width: 30rem;
+	width: 30rem;
 }
 
 .title {
-  font-size: 60px;
-  font-weight: 900;
+	font-size: 60px;
+	font-weight: 900;
 }
 
 .text {
-  font-size: 30px;
-  font-weight: 500;
+	font-size: 30px;
+	font-weight: 500;
 }
 
 .button {
-  border-radius: 40px;
-  background-color: var(--yellow);
-  color: var(--blue);
-  font-size: 30px;
-  font-weight: 800;
-  padding: 1rem;
-  margin: 2rem;
+	border-radius: 40px;
+	background-color: var(--yellow);
+	color: var(--blue);
+	font-size: 30px;
+	font-weight: 800;
+	padding: 1rem;
+	margin: 2rem;
 }
 
 .button:hover {
-  cursor: pointer;
-  color: var(--white);
+	cursor: pointer;
+	color: var(--white);
+}
+
+/* Event Styles */
+.events {
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+}
+
+.eventCard {
+	position: relative;
+	width: 25rem;
+	background: var(--white);
+	border-radius: 16px;
+	/* overflow: hidden; */
+	box-shadow: 0 4px 12px black;
+	margin-bottom: 80px; /* Space for the overlapping host image */
+}
+
+.eventImage {
+	position: relative;
+	width: 100%;
+	height: 15rem;
+	overflow: hidden;
+}
+
+.eventInfo {
+	background: var(--yellow);
+	padding: 40px 60px 80px 60px;
+	color: var(--blue);
+	border-radius: 0 0 16px 16px;
+}
+
+.eventTitle {
+	font-size: 24px;
+	font-weight: 800;
+	margin: 0 0 12px 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.eventDescription {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0 0 24px 0;
+	font-weight: 400;
+}
+
+.eventDetails {
+	margin: 0;
+}
+
+.eventDetails p {
+	font-size: 18px;
+	margin: 8px 0;
+	font-weight: 500;
+}
+
+.eventDetails strong {
+	font-weight: 800;
+}
+
+.eventHost {
+	position: absolute;
+	bottom: -70px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 6px solid var(--white);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

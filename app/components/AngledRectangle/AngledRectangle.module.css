@@ -7,15 +7,15 @@
 	justify-content: center;
 	overflow: hidden;
 	margin: -5rem 0 -5rem 0;
-  padding: 4rem 0 4rem 0;
+	padding: 4rem 0 4rem 0;
 }
 
 .angled_rectangle.right {
-	clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+	clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 }
 
 .angled_rectangle.left {
-	clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
+	clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 95%);
 }
 
 .angled_rectangle.yellow {
@@ -44,7 +44,8 @@
 
 .angled_content {
 	text-align: left;
-  max-width: 70%;
+	max-width: 70%;
 	/* z-index: 1; */
 	position: relative;
+	padding: 10rem 0 10rem 0;
 }
