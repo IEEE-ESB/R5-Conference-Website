@@ -17,32 +17,38 @@
 	text-transform: uppercase;
 }
 
+.button {
+	cursor: pointer;
+}
+
 .button.blue {
 	background-color: var(--blue);
-	color: var(--yellow);
 }
 
-.button.blue:hover {
-	cursor: pointer;
-	color: var(--white);
-}
-
-.button.white {
-	background-color: var(--white);
+.button.blueText {
 	color: var(--blue);
 }
 
-.button.blue:hover {
-	cursor: pointer;
+.button.blueText:hover {
 	color: var(--white);
+}
+
+.button.whiteText {
+	color: var(--white);
+}
+
+.button.whiteText:hover {
+	color: var(--yellow);
 }
 
 .button.yellow {
 	background-color: var(--yellow);
-	color: var(--blue);
 }
 
-.button.blue:hover {
-	cursor: pointer;
+.button.yellowText {
+	color: var(--yellow);
+}
+
+.button.yellowText:hover {
 	color: var(--white);
 }
