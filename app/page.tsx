@@ -1,24 +1,6 @@
 import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
 import styles from "./page.module.css";
 
-function Event() {
-	return (
-		<a href="#" className={styles.event}>
-			<div>
-				<img src="##" />
-				<div>
-					<h3>Title</h3>
-					<p>Description</p>
-					<h3>Time:</h3>
-					<h3>Location:</h3>
-					<h3>Leads:</h3>
-				</div>
-			</div>
-			<img src="#" />
-		</a>
-	);
-}
-
 function EventCard() {
 	return (
 		<a href="#" target="_blank" className={styles.eventCard}>
