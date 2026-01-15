@@ -9,11 +9,12 @@
 
 .button {
 	border-radius: 60px;
-	font-size: 36px;
-	font-weight: 900;
-	padding: 2rem;
+	font-size: 32px;
+	font-weight: 500;
+	padding: 1.5rem 3rem;
 	margin: 2rem;
 	width: fit-content;
+	text-transform: uppercase;
 }
 
 .button.blue {

@@ -61,7 +61,7 @@ export default function Home() {
 					<EventCard />
 					<EventCard />
 				</div>
-				<Button text="Learn More" />
+				<Button text="See More" />
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Become A Member</h1>
