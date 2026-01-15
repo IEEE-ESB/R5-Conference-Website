@@ -1,4 +1,5 @@
 import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
+import Button from "./components/Button/Button";
 import styles from "./page.module.css";
 
 function EventCard() {
@@ -60,6 +61,7 @@ export default function Home() {
 					<EventCard />
 					<EventCard />
 				</div>
+				<Button text="Learn More" />
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Become A Member</h1>

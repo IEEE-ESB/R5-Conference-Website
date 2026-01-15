@@ -1,0 +1,47 @@
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Changed from fit-content */
+	overflow: hidden; /* Prevents any image bleed */
+}
+
+.button {
+	border-radius: 60px;
+	font-size: 36px;
+	font-weight: 900;
+	padding: 2rem;
+	margin: 2rem;
+	width: fit-content;
+}
+
+.button.blue {
+	background-color: var(--blue);
+	color: var(--yellow);
+}
+
+.button.blue:hover {
+	cursor: pointer;
+	color: var(--white);
+}
+
+.button.white {
+	background-color: var(--white);
+	color: var(--blue);
+}
+
+.button.blue:hover {
+	cursor: pointer;
+	color: var(--white);
+}
+
+.button.yellow {
+	background-color: var(--yellow);
+	color: var(--blue);
+}
+
+.button.blue:hover {
+	cursor: pointer;
+	color: var(--white);
+}
