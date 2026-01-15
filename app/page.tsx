@@ -21,29 +21,28 @@ function Event() {
 
 function EventCard() {
 	return (
-		<div className={styles.eventCard}>
+		<a href="#" target="_blank" className={styles.eventCard}>
 			<div className={styles.eventImage}>
-				<img src="#" alt="" style={{ objectFit: "cover" }} />
+				<img src="hero.jpg" alt="" style={{ objectFit: "cover" }} />
 			</div>
 
 			<div className={styles.eventInfo}>
-				<h2 className={styles.eventTitle}>Test</h2>
-				<p className={styles.eventDescription}>Test</p>
+				<h2 className={styles.eventTitle}>Event Title</h2>
+				<p className={styles.eventDescription}>
+					Nulla labore ea eiusmod ea excepteur minim cillum sunt consequat elit
+					sint do duis amet.
+				</p>
 
 				<div className={styles.eventDetails}>
-					<p>
-						<strong>TIME:</strong>test
-					</p>
-					<p>
-						<strong>LOCATION:</strong> test
-					</p>
+					<p>TIME: 5pm 04/01/2067</p>
+					<p>LOCATION: UTRGV</p>
 				</div>
 			</div>
 
 			<div className={styles.eventHost}>
-				<img src="#" alt="" style={{ objectFit: "cover" }} />
+				<img src="hero.jpg" alt="" style={{ objectFit: "cover" }} />
 			</div>
-		</div>
+		</a>
 	);
 }
 
