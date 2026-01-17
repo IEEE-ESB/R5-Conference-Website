@@ -20,7 +20,7 @@ export default function Button({
 }: {
 	href?: string;
 	text: string;
-	color?: "blue" | "yellow";
+	color?: "blue" | "white" | "yellow";
 	textColor?: "blue" | "white" | "yellow";
 }) {
 	return (

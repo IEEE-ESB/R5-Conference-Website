@@ -6,7 +6,7 @@ function EventCard() {
 	return (
 		<a href="#" target="_blank" className={styles.eventCard}>
 			<div className={styles.eventImage}>
-				<img src="hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
 			</div>
 
 			<div className={styles.eventInfo}>
@@ -23,7 +23,7 @@ function EventCard() {
 			</div>
 
 			<div className={styles.eventHost}>
-				<img src="hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
 			</div>
 		</a>
 	);
@@ -33,7 +33,7 @@ export default function Home() {
 	return (
 		<div>
 			<div className={styles.container}>
-				<img src="hero.jpg" className={styles.container_img} />
+				<img src="/hero.jpg" className={styles.container_img} />
 				<div className={`${styles.centered_link} ${styles.container}`}>
 					<a target="_blank" href="https://ieee.org">
 						<img src="/ieee_mb_white.png" />
@@ -48,11 +48,12 @@ export default function Home() {
 					dedicated to fostering innovation, leadership, and hands-on experience
 					in engineering and technology.
 				</p>
-				<div className={styles.container}>
-					<a href="/about" className={styles.button}>
-						Learn More
-					</a>
-				</div>
+				<Button
+					text="Learn More"
+					href="/about"
+					color="yellow"
+					textColor="blue"
+				/>
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="white" textColor="blue">
 				<h1>Upcoming Events</h1>
@@ -61,13 +62,45 @@ export default function Home() {
 					<EventCard />
 					<EventCard />
 				</div>
-				<Button text="See More" />
+				<Button text="See More" href="/events" />
 			</AngledRectangle>
 			<AngledRectangle>
-				<h1>Become A Member</h1>
+				<div className={styles.aboutFlex}>
+					<div className={styles.aboutContent}>
+						<h1>Become A Member</h1>
+						<p>
+							Ready to take the next step? Membership gives you more than access
+							- it's a chance to connect with peers, build skills, and create
+							lasting memories. Join us and grow together!
+						</p>
+						<Button
+							href="membership"
+							text="join"
+							color="white"
+							textColor="blue"
+						/>
+					</div>
+					<img src="/hero.jpg" width="1000rem" />
+				</div>
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="yellow" textColor="blue">
-				<h1>Want To Collaborate?</h1>
+				<div className={styles.aboutFlex}>
+					<img src="/hero.jpg" width="1000rem" />
+					<div className={styles.aboutContent}>
+						<h1>Want To Collaborate?</h1>
+						<p>
+							UTRGV IEEE teams up with clubs and businesses to host events,
+							share knowledge, and drive innovation. If you're interested in
+							collaborating, we'd love to hear from you!
+						</p>
+						<Button
+							href="/collaborate"
+							text="learn more"
+							color="blue"
+							textColor="white"
+						/>
+					</div>
+				</div>
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Meet Our Team</h1>

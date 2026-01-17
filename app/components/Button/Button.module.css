@@ -30,7 +30,11 @@
 }
 
 .button.blueText:hover {
-	color: var(--white);
+	color: var(--yellow);
+}
+
+.button.white {
+	background-color: var(--white);
 }
 
 .button.whiteText {
@@ -43,6 +47,10 @@
 
 .button.yellow {
 	background-color: var(--yellow);
+}
+
+.button.yellow.blueText:hover {
+	color: var(--white);
 }
 
 .button.yellowText {
