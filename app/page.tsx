@@ -29,6 +29,32 @@ function EventCard() {
 	);
 }
 
+function LeadershipCard({
+	name,
+	role,
+	imageUrl,
+}: {
+	name: string;
+	role: string;
+	imageUrl: string;
+}) {
+	return (
+		<div className={styles.card}>
+			<div className={styles.imageContainer}>
+				<img
+					src={imageUrl}
+					alt={`${name} - ${role}`}
+					className={styles.profileImage}
+				/>
+			</div>
+			<div className={styles.textContainer}>
+				<h3 className={styles.role}>{role}</h3>
+				<p className={styles.name}>{name}</p>
+			</div>
+		</div>
+	);
+}
+
 export default function Home() {
 	return (
 		<div>
@@ -104,10 +130,68 @@ export default function Home() {
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Meet Our Team</h1>
+				<div className={styles.aboutFlex}>
+					<LeadershipCard
+						name="Diego Sauceda"
+						role="President"
+						imageUrl="/hero.jpg"
+					/>
+					<LeadershipCard
+						name="Diego Sauceda"
+						role="President"
+						imageUrl="/hero.jpg"
+					/>
+					<LeadershipCard
+						name="Diego Sauceda"
+						role="President"
+						imageUrl="/hero.jpg"
+					/>
+				</div>
+				<Button
+					href="/leadership"
+					text="learn more"
+					color="yellow"
+					textColor="blue"
+				/>
 			</AngledRectangle>
-			<AngledRectangle flipped={true} color="white" textColor="blue">
+			{/* <AngledRectangle flipped={true} color="white" textColor="blue"> */}
+			{/* <div className={styles.locationSection}>
 				<h1>Our Location</h1>
-			</AngledRectangle>
+				<p className={styles.locationSubtitle}>
+					EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
+				</p>
+				<div className={styles.mapContainer}>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.1579292776966!2d-98.17407678034083!3d26.306036498563397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a249f543dcd1%3A0x3c15a7793a944b1d!2sUTRGV%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1768677751992!5m2!1sen!2sus&zoom=1"
+						width="100%"
+						height="100%"
+						style={{ border: 0 }}
+						allowFullScreen={false}
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+					/>
+				</div>
+			</div> */}
+			{/* </AngledRectangle> */}
+			<div className={styles.locationSection}>
+				<div className={styles.mapContainer}>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.1579292776966!2d-98.17407678034083!3d26.306036498563397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a249f543dcd1%3A0x3c15a7793a944b1d!2sUTRGV%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1768677751992!5m2!1sen!2sus&zoom=1"
+						width="100%"
+						height="100%"
+						style={{ border: 0 }}
+						allowFullScreen
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+					></iframe>
+					<div className={styles.locationOverlay}>
+						<h1>Our Location</h1>
+						<p className={styles.locationSubtitle}>
+							EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
