@@ -137,13 +137,13 @@ export default function Home() {
 						imageUrl="/hero.jpg"
 					/>
 					<LeadershipCard
-						name="Diego Sauceda"
-						role="President"
+						name="Koriel Lopez"
+						role="Vice President"
 						imageUrl="/hero.jpg"
 					/>
 					<LeadershipCard
-						name="Diego Sauceda"
-						role="President"
+						name="Joseph Trevino"
+						role="Secretary"
 						imageUrl="/hero.jpg"
 					/>
 				</div>
