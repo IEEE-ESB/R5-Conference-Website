@@ -175,3 +175,90 @@ body {
 	letter-spacing: 1px;
 	opacity: 0.6;
 }
+
+.footer {
+	background-color: #062b55;
+	color: #ffffff;
+	padding: 60px 80px 24px;
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 80px;
+}
+
+/* Logo */
+.footer-logo img {
+	height: 48px;
+	width: auto;
+}
+
+/* Navigation */
+.footer-nav {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	column-gap: 80px;
+	row-gap: 16px;
+}
+
+.footer-nav a {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+}
+
+.footer-nav a:hover {
+	color: #ffc72c;
+}
+
+/* Social Icons */
+.footer-socials {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin: 48px 0 24px;
+}
+
+.footer-socials a {
+	width: 44px;
+	height: 44px;
+	/* background-color: rgba(255, 255, 255, 0.15); */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* transition: background-color 0.25s ease, transform 0.2s ease; */
+}
+
+.footer-socials a:hover {
+	/* background-color: rgba(255, 255, 255, 0.25); */
+	transform: translateY(-2px);
+}
+
+.footer-socials img {
+	width: 80%;
+	height: fit-content;
+}
+
+.discord {
+	background-color: white;
+}
+.instagram {
+	background-color: white;
+}
+.facebook {
+	background-color: white;
+}
+
+/* Bottom text */
+.footer-bottom {
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 1px;
+	opacity: 0.6;
+}
