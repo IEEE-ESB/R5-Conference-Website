@@ -257,3 +257,10 @@
 	/* line-height: 1.4; */
 	color: var(--blue);
 }
+
+/* Content Images */
+.contentImg {
+	width: 50%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+}

@@ -106,12 +106,12 @@ export default function Home() {
 							textColor="blue"
 						/>
 					</div>
-					<img src="/hero.jpg" width="1000rem" />
+					<img src="/hero.jpg" width="50%" className={styles.contentImg} />
 				</div>
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="yellow" textColor="blue">
 				<div className={styles.aboutFlex}>
-					<img src="/hero.jpg" width="1000rem" />
+					<img src="/hero.jpg" width="50%" className={styles.contentImg} />
 					<div className={styles.aboutContent}>
 						<h1>Want To Collaborate?</h1>
 						<p>
