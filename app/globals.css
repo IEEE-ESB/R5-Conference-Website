@@ -35,13 +35,13 @@ body {
 	width: 100%;
 	z-index: 1000; /* stays above all content */
 	background-color: #002855; /* IEEE dark blue */
-	height: 72px;
+	height: 5rem;
 	display: flex;
 	align-items: center;
 	padding: 0 48px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .navbar-logo {
@@ -91,9 +91,9 @@ body {
 	color: var(--white);
 	padding: 60px 80px 24px;
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  z-index: 999;
-  position: absolute;
-  width: 100%;
+	z-index: 999;
+	position: absolute;
+	width: 100%;
 }
 
 .footer-container {

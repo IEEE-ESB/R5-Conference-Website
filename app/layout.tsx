@@ -93,6 +93,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<Header />
+				<div style={{ marginTop: "5rem" }} />
 				{children}
 				<Footer />
 			</body>
