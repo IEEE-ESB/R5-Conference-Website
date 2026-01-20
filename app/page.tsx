@@ -106,12 +106,20 @@ export default function Home() {
 							textColor="blue"
 						/>
 					</div>
-					<img src="/hero.jpg" width="50%" className={styles.contentImg} />
+					<img
+						src="/2024_group_pic.jpeg"
+						width="50%"
+						className={styles.contentImg}
+					/>
 				</div>
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="yellow" textColor="blue">
 				<div className={styles.aboutFlex}>
-					<img src="/hero.jpg" width="50%" className={styles.contentImg} />
+					<img
+						src="/kids_class_presentation.jpg"
+						width="50%"
+						className={styles.contentImg}
+					/>
 					<div className={styles.aboutContent}>
 						<h1>Want To Collaborate?</h1>
 						<p>
@@ -134,17 +142,17 @@ export default function Home() {
 					<LeadershipCard
 						name="Diego Sauceda"
 						role="President"
-						imageUrl="/hero.jpg"
+						imageUrl="/diego.png"
 					/>
 					<LeadershipCard
 						name="Koriel Lopez"
 						role="Vice President"
-						imageUrl="/hero.jpg"
+						imageUrl="/kory.png"
 					/>
 					<LeadershipCard
 						name="Joseph Trevino"
 						role="Secretary"
-						imageUrl="/hero.jpg"
+						imageUrl="/joseph.png"
 					/>
 				</div>
 				<Button
