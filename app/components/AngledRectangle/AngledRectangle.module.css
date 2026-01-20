@@ -1,47 +1,65 @@
-/* AngledRectangle.css */
-:root {
-	--blue: #002855;
-	--yellow: #ffc72c;
-	--white: #fff;
-}
-
 .angled_rectangle {
 	position: relative;
 	width: 100%;
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
-	overflow: hidden;
-	margin: -2rem 0 -2rem 0;
+	/* overflow: hidden; */
+	margin: -5rem 0;
+	padding: 5rem 0;
+}
+
+.angled_rectangle h1 {
+	font-size: 80px;
+	font-weight: 900;
+	/* text-align: left; */
+	/* margin-bottom: 5rem; */
+	text-transform: uppercase;
+	line-height: 1;
 }
 
 .angled_rectangle.right {
-	clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+	clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 }
 
 .angled_rectangle.left {
-	clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
+	clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 95%);
 }
 
 .angled_rectangle.yellow {
 	background: var(--yellow);
-	color: var(--blue);
 }
 
 .angled_rectangle.white {
 	background: var(--white);
-	color: var(--blue);
 }
 
 .angled_rectangle.blue {
 	background: var(--blue);
+}
+
+.angled_rectangle.text_yellow {
 	color: var(--yellow);
 }
 
+.angled_rectangle.text_white {
+	color: var(--white);
+}
+
+.angled_rectangle.text_blue {
+	color: var(--blue);
+}
+
 .angled_content {
-	text-align: center;
-	max-width: 900px;
-	margin: 2rem;
+	text-align: left;
+	/* max-width: 70%; */
 	/* z-index: 1; */
-	position: relative;
+	/* position: relative; */
+	padding: 10rem 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	gap: 5rem;
+	width: 100%;
 }
