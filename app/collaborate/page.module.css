@@ -1,82 +1,82 @@
 .container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; /* Changed from fit-content */
-  overflow: hidden; /* Prevents any image bleed */
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Changed from fit-content */
+	overflow: hidden; /* Prevents any image bleed */
 }
 
 .container_img {
-  display: block; /* Removes the tiny gap at the bottom */
-  width: 100%;
-  height: auto; /* Let aspect-ratio handle the height */
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
+	display: block; /* Removes the tiny gap at the bottom */
+	width: 100%;
+	height: auto; /* Let aspect-ratio handle the height */
+	aspect-ratio: 16 / 7;
+	object-fit: cover;
 }
 
 .container_header {
-  margin-left: 2rem;
-  line-height: 1;
-  color: #eab937;
-  position: absolute;
-  z-index: 1;
-  bottom: -0.5rem;
-  left: 10px;
-  font-size: 5rem;
-  font-weight: bold;
+	margin-left: 2rem;
+	line-height: 1;
+	color: #eab937;
+	position: absolute;
+	z-index: 1;
+	bottom: 1rem;
+	left: 10px;
+	font-size: 5rem;
+	font-weight: bold;
 }
 
 .text {
-  color: white;
+	color: white;
 }
 
 .header {
-  font-size: 2.5rem;
-  font-weight: bold;
+	font-size: 2.5rem;
+	font-weight: bold;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: #052f56;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #052f56;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
 }
 
 .bullet {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background-color: #eaba3a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  font-weight: bold;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-color: #eaba3a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	font-weight: bold;
 }
 
 .textContainer {
-  margin-left: 5%;
-  flex: 0.8;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 10px;
-  text-align: left;
+	margin-left: 5%;
+	flex: 0.8;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 10px;
+	text-align: left;
 }
 
 .rowHeader {
-  font-weight: 700;
-  font-size: 1.3rem;
+	font-weight: 700;
+	font-size: 1.3rem;
 }
 
 .rowText {
-  font-size: 1em;
+	font-size: 1em;
 }
