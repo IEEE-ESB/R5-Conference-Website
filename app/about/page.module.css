@@ -1,0 +1,26 @@
+.aboutContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.aboutContainer div {
+	width: 50%;
+}
+
+.aboutContainer p {
+	margin-top: 2rem;
+}
+
+.valuesContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.valuesContainer ul {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
