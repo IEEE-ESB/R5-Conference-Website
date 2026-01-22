@@ -1,65 +1,205 @@
-import Image from "next/image";
+import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
+import Button from "./components/Button/Button";
+import styles from "./page.module.css";
+
+function EventCard() {
+	return (
+		<a href="#" target="_blank" className={styles.eventCard}>
+			<div className={styles.eventImage}>
+				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+			</div>
+
+			<div className={styles.eventInfo}>
+				<h2 className={styles.eventTitle}>Event Title</h2>
+				<p className={styles.eventDescription}>
+					Nulla labore ea eiusmod ea excepteur minim cillum sunt consequat elit
+					sint do duis amet.
+				</p>
+
+				<div className={styles.eventDetails}>
+					<p>TIME: 5pm 04/01/2067</p>
+					<p>LOCATION: UTRGV</p>
+				</div>
+			</div>
+
+			<div className={styles.eventHost}>
+				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+			</div>
+		</a>
+	);
+}
+
+function LeadershipCard({
+	name,
+	role,
+	imageUrl,
+}: {
+	name: string;
+	role: string;
+	imageUrl: string;
+}) {
+	return (
+		<div className={styles.card}>
+			<div className={styles.imageContainer}>
+				<img
+					src={imageUrl}
+					alt={`${name} - ${role}`}
+					className={styles.profileImage}
+				/>
+			</div>
+			<div className={styles.textContainer}>
+				<h3 className={styles.role}>{role}</h3>
+				<p className={styles.name}>{name}</p>
+			</div>
+		</div>
+	);
+}
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+	return (
+		<div>
+			<div className={styles.container}>
+				<img src="/hero.jpg" className={styles.container_img} />
+				<div className={`${styles.centered_link} ${styles.container}`}>
+					<a target="_blank" href="https://ieee.org">
+						<img src="/ieee_mb_white.png" />
+					</a>
+				</div>
+			</div>
+			<AngledRectangle>
+				<h1 className={styles.title}>About Us</h1>
+				<p className={styles.text}>
+					The Institute of Electrical and Electronics Engineers - Edinburg
+					Student Branch (IEEE ESB) is a dynamic, student-run organization
+					dedicated to fostering innovation, leadership, and hands-on experience
+					in engineering and technology.
+				</p>
+				<Button
+					text="Learn More"
+					href="/about"
+					color="yellow"
+					textColor="blue"
+				/>
+			</AngledRectangle>
+			<AngledRectangle flipped={true} color="white" textColor="blue">
+				<h1>Upcoming Events</h1>
+				<div className={styles.events}>
+					<EventCard />
+					<EventCard />
+					<EventCard />
+				</div>
+				<Button text="See More" href="/events" />
+			</AngledRectangle>
+			<AngledRectangle>
+				<div className={styles.aboutFlex}>
+					<div className={styles.aboutContent}>
+						<h1>Become A Member</h1>
+						<p>
+							Ready to take the next step? Membership gives you more than access
+							- it's a chance to connect with peers, build skills, and create
+							lasting memories. Join us and grow together!
+						</p>
+						<Button
+							href="membership"
+							text="join"
+							color="white"
+							textColor="blue"
+						/>
+					</div>
+					<img
+						src="/2024_group_pic.jpeg"
+						width="50%"
+						className={styles.contentImg}
+					/>
+				</div>
+			</AngledRectangle>
+			<AngledRectangle flipped={true} color="yellow" textColor="blue">
+				<div className={styles.aboutFlex}>
+					<img
+						src="/kids_class_presentation.jpg"
+						width="50%"
+						className={styles.contentImg}
+					/>
+					<div className={styles.aboutContent}>
+						<h1>Want To Collaborate?</h1>
+						<p>
+							UTRGV IEEE teams up with clubs and businesses to host events,
+							share knowledge, and drive innovation. If you're interested in
+							collaborating, we'd love to hear from you!
+						</p>
+						<Button
+							href="/collaborate"
+							text="learn more"
+							color="blue"
+							textColor="white"
+						/>
+					</div>
+				</div>
+			</AngledRectangle>
+			<AngledRectangle>
+				<h1>Meet Our Team</h1>
+				<div className={styles.aboutFlex}>
+					<LeadershipCard
+						name="Diego Sauceda"
+						role="President"
+						imageUrl="/diego.png"
+					/>
+					<LeadershipCard
+						name="Koriel Lopez"
+						role="Vice President"
+						imageUrl="/kory.png"
+					/>
+					<LeadershipCard
+						name="Joseph Trevino"
+						role="Secretary"
+						imageUrl="/joseph.png"
+					/>
+				</div>
+				<Button
+					href="/leadership"
+					text="learn more"
+					color="yellow"
+					textColor="blue"
+				/>
+			</AngledRectangle>
+			{/* <AngledRectangle flipped={true} color="white" textColor="blue"> */}
+			{/* <div className={styles.locationSection}>
+				<h1>Our Location</h1>
+				<p className={styles.locationSubtitle}>
+					EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
+				</p>
+				<div className={styles.mapContainer}>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.1579292776966!2d-98.17407678034083!3d26.306036498563397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a249f543dcd1%3A0x3c15a7793a944b1d!2sUTRGV%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1768677751992!5m2!1sen!2sus&zoom=1"
+						width="100%"
+						height="100%"
+						style={{ border: 0 }}
+						allowFullScreen={false}
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+					/>
+				</div>
+			</div> */}
+			{/* </AngledRectangle> */}
+			<div className={styles.locationSection}>
+				<div className={styles.mapContainer}>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.1579292776966!2d-98.17407678034083!3d26.306036498563397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a249f543dcd1%3A0x3c15a7793a944b1d!2sUTRGV%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1768677751992!5m2!1sen!2sus&zoom=1"
+						width="100%"
+						height="100%"
+						style={{ border: 0 }}
+						allowFullScreen
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+					></iframe>
+					<div className={styles.locationOverlay}>
+						<h1>Our Location</h1>
+						<p className={styles.locationSubtitle}>
+							EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
