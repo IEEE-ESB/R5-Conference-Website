@@ -29,9 +29,11 @@
 
 .text {
 	color: white;
+	font-size: 2rem;
 }
 
 .header {
+	color: var(--yellow);
 	font-size: 2.5rem;
 	font-weight: bold;
 }
@@ -40,7 +42,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	color: #052f56;
+	color: var(--blue);
 }
 
 .row {
@@ -48,13 +50,14 @@
 	align-items: center;
 	width: 100%;
 	justify-content: center;
+	margin-bottom: 1rem;
 }
 
 .bullet {
-	width: 5rem;
-	height: 5rem;
+	width: 8rem;
+	height: 8rem;
 	border-radius: 50%;
-	background-color: #eaba3a;
+	background-color: var(--yellow);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -74,9 +77,9 @@
 
 .rowHeader {
 	font-weight: 700;
-	font-size: 1.3rem;
+	font-size: 2rem;
 }
 
 .rowText {
-	font-size: 1em;
+	font-size: 1.5em;
 }
