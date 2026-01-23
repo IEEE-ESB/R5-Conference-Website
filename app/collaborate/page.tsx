@@ -1,4 +1,5 @@
 import AngledRectangle from "../components/AngledRectangle/AngledRectangle";
+import Button from "../components/Button/Button";
 import styles from "./page.module.css";
 export default function Collaborate() {
 	return (
@@ -76,6 +77,12 @@ export default function Collaborate() {
 						</div>
 					</div>
 				</div>
+				<Button
+					href="contact"
+					text="CONTACT US"
+					textColor="blue"
+					color="yellow"
+				></Button>
 			</AngledRectangle>
 		</div>
 	);
