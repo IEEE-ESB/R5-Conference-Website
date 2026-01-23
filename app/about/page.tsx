@@ -42,32 +42,32 @@ export default function About() {
 					<h2>Our Values</h2>
 					<ul>
 						<li>
-							<p>Innovation</p>
+							<h3>Innovation</h3>
 							<p>
 								We encourage creativity and experimentation in all student-led
 								projects.
 							</p>
 						</li>
 						<li>
-							<p>Collaboration</p>
+							<h3>Collaboration</h3>
 							<p>We believe in teamwork across disciplines and backgrounds.</p>
 						</li>
 						<li>
-							<p>Community Engagement</p>
+							<h3>Community Engagement</h3>
 							<p>
 								We are committed to serving and inspiring our local community,
 								especially the next generation.
 							</p>
 						</li>
 						<li>
-							<p>Growth</p>
+							<h3>Growth</h3>
 							<p>
 								We provide resources and experiences that help members grow
 								technically, professionally, and personally.
 							</p>
 						</li>
 						<li>
-							<p>Leadership</p>
+							<h3>Leadership</h3>
 							<p>
 								We nurture student leaders who drive positive change in their
 								field and their community.
