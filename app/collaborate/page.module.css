@@ -28,6 +28,7 @@
 }
 
 .text {
+	padding: 0 10%;
 	color: var(--white);
 	font-size: 2rem;
 }
