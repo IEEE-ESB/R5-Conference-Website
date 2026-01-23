@@ -1,0 +1,86 @@
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Changed from fit-content */
+	overflow: hidden; /* Prevents any image bleed */
+}
+
+.container_img {
+	display: block; /* Removes the tiny gap at the bottom */
+	width: 100%;
+	height: auto; /* Let aspect-ratio handle the height */
+	aspect-ratio: 16 / 7;
+	object-fit: cover;
+}
+
+.container_header {
+	margin-left: 2rem;
+	line-height: 1;
+	color: var(--yellow);
+	position: absolute;
+	z-index: 1;
+	bottom: 1rem;
+	left: 10px;
+	font-size: 5.5rem;
+	font-weight: 900;
+}
+
+.text {
+	padding: 0 10%;
+	color: var(--white);
+	font-size: 2rem;
+}
+
+.header {
+	color: var(--yellow);
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--blue);
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.bullet {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	background-color: var(--yellow);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.textContainer {
+	margin-left: 5%;
+	flex: 0.8;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 10px;
+	text-align: left;
+}
+
+.rowHeader {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.rowText {
+	font-size: 1.5em;
+}
