@@ -26,8 +26,8 @@ export default function About() {
 				</div>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
-				<h2>Our Mission</h2>
-				<p>
+				<h2 className={styles.missionTitle}>Our Mission</h2>
+				<p className={styles.missionContent}>
 					Our mission is to empower students through hands-on learning,
 					leadership opportunities, and community outreach in engineering and
 					technology cultivating the next generation of innovators and
