@@ -88,7 +88,9 @@ export default function Home() {
 					<EventCard />
 					<EventCard />
 				</div>
-				<Button text="See More" href="/events" />
+				<div className={styles.eventButton}>
+					<Button text="See More" href="/events" />
+				</div>
 			</AngledRectangle>
 			<AngledRectangle>
 				<div className={styles.aboutFlex}>

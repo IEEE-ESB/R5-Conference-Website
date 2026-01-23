@@ -4,12 +4,12 @@ export default function AngledRectangle({
 	children,
 	flipped = false,
 	color = "blue",
-  textColor = "white"
+	textColor = "white",
 }: {
 	children: React.ReactNode;
 	flipped?: boolean;
 	color?: "yellow" | "white" | "blue";
-  textColor?: "yellow" | "white" | "blue";
+	textColor?: "yellow" | "white" | "blue";
 }) {
 	return (
 		<div
