@@ -1,4 +1,5 @@
 import AngledRectangle from "../components/AngledRectangle/AngledRectangle";
+import ImageStack from "../components/ImageStack/ImageStack";
 import styles from "./page.module.css";
 
 export default function About() {
@@ -22,9 +23,9 @@ export default function About() {
 							make a real impact both on campus and in the wider community.
 						</p>
 					</div>
-					<img />
 				</div>
 			</AngledRectangle>
+			<ImageStack />
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
 				<h2 className={styles.missionTitle}>Our Mission</h2>
 				<p className={styles.missionContent}>
