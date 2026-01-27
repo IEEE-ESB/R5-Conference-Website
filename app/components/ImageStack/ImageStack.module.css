@@ -4,8 +4,8 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	top: -45rem; /* These need to change with parameters */
-	left: 60rem;
+	top: var(--top-position); /* These need to change with parameters */
+	left: var(--left-position);
 }
 
 .photo {

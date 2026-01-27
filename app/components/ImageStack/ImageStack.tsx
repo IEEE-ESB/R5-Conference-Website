@@ -14,7 +14,15 @@ export default function ImageStack({
 	flipped?: boolean;
 }) {
 	return (
-		<div className={styles.container}>
+		<div
+			className={styles.container}
+			style={
+				{
+					"--top-position": `${position[0]}rem`,
+					"--left-position": `${position[1]}rem`,
+				} as React.CSSProperties
+			}
+		>
 			<img
 				src={image1}
 				className={`${styles.image1} ${styles.photo} ${flipped && styles.flipped}`}
