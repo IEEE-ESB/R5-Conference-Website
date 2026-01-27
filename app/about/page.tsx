@@ -25,7 +25,12 @@ export default function About() {
 					</div>
 				</div>
 			</AngledRectangle>
-			<ImageStack />
+			<ImageStack
+				image1="/kids_class_presentation.jpg"
+				image2="/kids_class_presentation.jpg"
+				image3="/kids_class_presentation.jpg"
+				position={[-45, 60]}
+			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
 				<h2 className={styles.missionTitle}>Our Mission</h2>
 				<p className={styles.missionContent}>

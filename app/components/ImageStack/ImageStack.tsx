@@ -1,22 +1,31 @@
 import styles from "./ImageStack.module.css";
 
-export default function ImageStack() {
+export default function ImageStack({
+	image1,
+	image2,
+	image3,
+	position,
+	flipped = false,
+}: {
+	image1: string;
+	image2: string;
+	image3: string;
+	position: [number, number];
+	flipped?: boolean;
+}) {
 	return (
 		<div className={styles.container}>
 			<img
-				src="/kids_class_presentation.jpg"
-				alt="IEEE Presentation"
-				className={`${styles.image1} ${styles.photo}`}
+				src={image1}
+				className={`${styles.image1} ${styles.photo} ${flipped && styles.flipped}`}
 			/>
 			<img
-				src="/hero.jpg"
-				alt="Workshop Activity"
-				className={`${styles.image2} ${styles.photo}`}
+				src={image2}
+				className={`${styles.image2} ${styles.photo} ${flipped && styles.flipped}`}
 			/>
 			<img
-				src="/2024_group_pic.jpeg"
-				alt="Team Photo"
-				className={`${styles.image3} ${styles.photo}`}
+				src={image3}
+				className={`${styles.image3} ${styles.photo} ${flipped && styles.flipped}`}
 			/>
 		</div>
 	);
