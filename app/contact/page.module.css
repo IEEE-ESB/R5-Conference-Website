@@ -1,0 +1,120 @@
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Changed from fit-content */
+	overflow: visible; /* Prevents any image bleed */
+}
+
+.container_img {
+	width: 100vw;
+	height: 87.5vh; /* Let aspect-ratio handle the height */
+	object-fit: cover;
+}
+
+.contactForm {
+	z-index: 2;
+	overflow: visible;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	gap: 3vh;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	background-color: var(--blue);
+	border-radius: 10%;
+	width: 50vw;
+	top: 10vh;
+	left: auto;
+	right: auto;
+	padding: 5vh 0;
+}
+
+.contactTitle {
+	font-size: 6vw;
+	font-weight: 900;
+}
+
+.inputGroup {
+	display: flex;
+	width: 60%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.inputGroup input {
+	padding: 5%;
+	width: 100%;
+	height: 5vh;
+	border: 2px gray solid;
+	border-radius: 9999px;
+}
+
+.inputGroup label {
+	font-weight: 700;
+}
+
+#comments {
+	width: 80%;
+	height: 40vh;
+	border: 2px gray solid;
+	border-radius: 20px;
+	padding: 1%;
+}
+
+.button {
+	border-radius: 60px;
+	font-size: 2vw;
+	font-weight: 500;
+	padding: 1vh 3vw;
+	/* 	margin: 2rem; */
+	width: fit-content;
+	text-transform: uppercase;
+}
+
+.button {
+	cursor: pointer;
+}
+
+.button.blue {
+	background-color: var(--blue);
+}
+
+.button.blueText {
+	color: var(--blue);
+}
+
+.button.blueText:hover {
+	color: var(--yellow);
+}
+
+.button.white {
+	background-color: var(--white);
+}
+
+.button.whiteText {
+	color: var(--white);
+}
+
+.button.whiteText:hover {
+	color: var(--yellow);
+}
+
+.button.yellow {
+	background-color: var(--yellow);
+}
+
+.button.yellow.blueText:hover {
+	color: var(--white);
+}
+
+.button.yellowText {
+	color: var(--yellow);
+}
+
+.button.yellowText:hover {
+	color: var(--white);
+}
