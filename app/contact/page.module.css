@@ -119,6 +119,10 @@
 	color: var(--white);
 }
 
+.spacing {
+	margin: 10vh 0;
+}
+
 /* Location Section */
 .locationSection {
 	width: 100%;

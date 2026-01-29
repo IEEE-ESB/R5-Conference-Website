@@ -88,7 +88,9 @@ export default function About() {
 					></FormButton>
 				</form>
 			</div>
-			<AngledRectangle color="yellow"></AngledRectangle>
+			<AngledRectangle color="yellow">
+				<div className={styles.spacing}></div>
+			</AngledRectangle>
 			<div className={styles.locationSection}>
 				<div className={styles.mapContainer}>
 					<iframe
