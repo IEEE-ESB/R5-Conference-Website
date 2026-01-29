@@ -228,7 +228,6 @@
 	margin: 3rem;
 	background-color: var(--white);
 	width: fit-content;
-	max-width: 30%;
 	/* background: linear-gradient(
 		135deg,
 		var(--blue) 0%,
@@ -242,7 +241,7 @@
 
 .locationOverlay h1 {
 	color: var(--blue);
-	font-size: 120px;
+	font-size: 9vw;
 	line-height: 0.8;
 	font-weight: 900;
 	/* margin: 0 0 1rem 0; */
@@ -250,6 +249,7 @@
 
 .locationSubtitle {
 	font-size: 24px;
+	width: 40vw;
 	font-weight: 600;
 	text-transform: uppercase;
 	/* letter-spacing: 0.05em; */
