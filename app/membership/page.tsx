@@ -24,7 +24,7 @@ export default function About() {
 				<img src="/help.jpeg" className={styles.container_img}></img>
 				<div className={styles.darken}>
 					<p className={styles.helpText}>
-						Need help with coursework or your senior design project? ‘ We've got
+						Need help with coursework or your senior design project? We've got
 						your back. And when it's your turn to give back, you can join us in
 						building partnerships and running fundraisers that make a difference
 						in our community. Try us for a semester you'll see why many stay for
@@ -45,7 +45,7 @@ export default function About() {
 					<div className={`${styles.packageColumn} `}>
 						<h2 className={styles.packageHeader}>Semester</h2>
 						<div className={styles.packagePrice}>$10</div>
-						<h3 className={styles.packageText}>WORKSHOPS FALL & SPRING</h3>
+						<h3 className={styles.packageText}>WORKSHOPS FALL OR SPRING</h3>
 					</div>
 					<div className={`${styles.packageColumn} `}>
 						<h2 className={styles.packageHeader}>YEAR</h2>
