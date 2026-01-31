@@ -38,14 +38,14 @@ export default function About() {
 				<h1 className={`${styles.priceHeader}`}>Memberships</h1>
 				<div className={`${styles.packageContainer}`}>
 					<div className={`${styles.packageColumn} `}>
-						<h2 className={styles.packageHeader}>YEAR</h2>
-						<div className={styles.packagePrice}>$15</div>
-						<h3 className={styles.packageText}>WORKSHOPS FALL & SPRING</h3>
-					</div>
-					<div className={`${styles.packageColumn} `}>
 						<h2 className={styles.packageHeader}>Semester</h2>
 						<div className={styles.packagePrice}>$10</div>
 						<h3 className={styles.packageText}>WORKSHOPS FALL OR SPRING</h3>
+					</div>
+					<div className={`${styles.packageColumn} `}>
+						<h2 className={styles.packageHeader}>YEAR</h2>
+						<div className={styles.packagePrice}>$15</div>
+						<h3 className={styles.packageText}>WORKSHOPS FALL & SPRING</h3>
 					</div>
 					<div className={`${styles.packageColumn} `}>
 						<h2 className={styles.packageHeader}>YEAR</h2>
