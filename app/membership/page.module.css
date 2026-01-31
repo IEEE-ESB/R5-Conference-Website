@@ -28,10 +28,10 @@
 }
 
 .darken {
-	display: block;
-	background-color: rgba(0, 0, 0, 1);
-	width: 100vh;
-	height: 30px;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
 }
 
 .text {
@@ -39,8 +39,6 @@
 }
 
 .helpText {
-	background-color: rgba(0, 0, 0, 0.3);
-
 	width: 45%;
 	font-size: 1.5vw;
 	position: absolute;
