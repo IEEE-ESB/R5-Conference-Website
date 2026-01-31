@@ -70,7 +70,7 @@ export default function About() {
 						<input
 							className={styles.input}
 							placeholder="Example@yourmail.com"
-							type="text"
+							type="email"
 							name="email"
 							required
 						/>
