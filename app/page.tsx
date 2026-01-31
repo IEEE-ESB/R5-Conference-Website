@@ -193,7 +193,9 @@ export default function Home() {
 						referrerPolicy="no-referrer-when-downgrade"
 					></iframe>
 					<div className={styles.locationOverlay}>
-						<h1>Our Location</h1>
+						<h1>
+							Our <br /> Location
+						</h1>
 						<p className={styles.locationSubtitle}>
 							EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
 						</p>
