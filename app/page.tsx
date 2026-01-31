@@ -196,9 +196,7 @@ export default function Home() {
 						<h1>
 							Our <br /> Location
 						</h1>
-						<p className={styles.locationSubtitle}>
-							EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
-						</p>
+						<p className={styles.locationSubtitle}>UTRGV EENGR 2.296</p>
 					</div>
 				</div>
 			</div>

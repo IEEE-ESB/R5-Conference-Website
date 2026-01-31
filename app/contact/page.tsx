@@ -106,6 +106,7 @@ export default function About() {
 						<h1>
 							Our <br /> Location
 						</h1>
+						<p className={styles.locationSubtitle}>UTRGV EENGR 2.296</p>
 					</div>
 				</div>
 			</div>
