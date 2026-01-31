@@ -59,7 +59,7 @@ export default function About() {
 						<label htmlFor="subject">Subject</label>
 						<input
 							className={styles.input}
-							placeholder="Tittle"
+							placeholder="Title"
 							type="text"
 							name="_subject"
 							required
