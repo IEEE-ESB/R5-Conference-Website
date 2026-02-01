@@ -8,7 +8,7 @@
 }
 
 .aboutContainer p {
-	margin-top: 2rem;
+	margin-bottom: 2rem;
 	font-size: 24px;
 	font-weight: 600;
 }
@@ -26,6 +26,12 @@
 	font-weight: 600;
 }
 
+.video {
+	object-fit: cover;
+	width: 100%;
+	height: 60rem;
+}
+
 .valuesContainer {
 	width: 100%;
 	display: flex;
@@ -37,7 +43,9 @@
 .valuesContainer h2 {
 	font-size: 48px;
 	font-weight: 800;
-	text-align: center;
+	text-align: left;
+	line-height: 1;
+	text-transform: uppercase;
 }
 
 .valuesContainer ul {
@@ -51,4 +59,10 @@
 .valuesContainer h3 {
 	font-weight: 600;
 	text-decoration: underline solid white;
+}
+
+.collage {
+	object-fit: cover;
+	width: 100%;
+	height: 50rem;
 }

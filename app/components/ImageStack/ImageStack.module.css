@@ -6,6 +6,7 @@
 	position: relative;
 	top: var(--top-position); /* These need to change with parameters */
 	left: var(--left-position);
+	width: 30%;
 }
 
 .photo {

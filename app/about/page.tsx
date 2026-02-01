@@ -40,12 +40,14 @@ export default function About() {
 					changemakers.
 				</p>
 			</AngledRectangle>
-			<AngledRectangle color="yellow">
-				<img /> {/* This will be the video */}
-			</AngledRectangle>
+			<img src="/hero.jpg" className={styles.video} />
+			{/* This will be the video */}
 			<AngledRectangle color="blue" textColor="white" flipped={true}>
 				<div className={styles.valuesContainer}>
-					<h2>Our Values</h2>
+					<div>
+						<h2>Our</h2>
+						<h2>Values</h2>
+					</div>
 					<ul>
 						<li>
 							<h3>Innovation</h3>
@@ -82,9 +84,7 @@ export default function About() {
 					</ul>
 				</div>
 			</AngledRectangle>
-			<AngledRectangle color="white">
-				<img />
-			</AngledRectangle>
+			<img src="/hero.jpg" className={styles.collage} />
 		</div>
 	);
 }
