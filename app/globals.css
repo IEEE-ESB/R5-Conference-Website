@@ -175,6 +175,16 @@ body {
 	opacity: 0.6;
 }
 
+/* Slanted footer for events page - matches competition banner bottom edge */
+.footer-slanted {
+	/* More dramatic slant: top edge goes from (100%, 0%) to (0, 10%) */
+	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+	margin-top: -5rem;
+	padding: 60px 80px 24px !important;
+	position: relative;
+	z-index: 1;
+}
+
 .footer {
 	background-color: #062b55;
 	color: #ffffff;
