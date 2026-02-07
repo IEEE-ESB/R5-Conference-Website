@@ -19,7 +19,7 @@ export default function ImageStack({
 			style={
 				{
 					"--top-position": `${position[0]}rem`,
-					"--left-position": `${position[1]}rem`,
+					"--left-position": `${position[1]}%`,
 				} as React.CSSProperties
 			}
 		>
