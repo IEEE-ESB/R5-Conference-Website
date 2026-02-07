@@ -10,12 +10,13 @@
 }
 
 .angled_rectangle h1 {
-	font-size: 80px;
+	font-size: 6vw;
 	font-weight: 900;
 	/* text-align: left; */
 	/* margin-bottom: 5rem; */
 	text-transform: uppercase;
 	line-height: 1;
+	text-align: center;
 }
 
 .angled_rectangle.right {
