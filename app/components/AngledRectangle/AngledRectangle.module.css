@@ -7,6 +7,7 @@
 	/* overflow: hidden; */
 	margin: -5rem 0;
 	padding: 5rem 0;
+	z-index: 1;
 }
 
 .angled_rectangle h1 {
@@ -16,7 +17,8 @@
 	/* margin-bottom: 5rem; */
 	text-transform: uppercase;
 	line-height: 1;
-	text-align: center;
+	padding-bottom: 3rem;
+	text-align: left;
 }
 
 .angled_rectangle.right {
@@ -61,6 +63,6 @@
 	flex-direction: column;
 	align-items: center;
 	/* justify-content: center; */
-	gap: 5rem;
+	/* gap: 5rem; */
 	width: 100%;
 }
