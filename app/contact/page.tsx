@@ -38,11 +38,15 @@ export default function About() {
 			<div className={styles.container}>
 				<img src="/contact-hero.jpeg" className={styles.container_img} />
 				<form
-					// action="https://api.web3forms.com/submit"
-					action="https://formsubmit.co/silverpeltisthebest@gmail.com"
+					action="https://api.web3forms.com/submit"
 					method="POST"
 					className={styles.contactForm}
 				>
+					<input
+						type="hidden"
+						name="access_key"
+						value="b4592f75-b6cd-443d-bbaa-c0e67695c04e"
+					/>
 					<h1 className={styles.contactTitle}>Contact Us</h1>
 
 					<div className={styles.inputGroup}>
@@ -77,10 +81,10 @@ export default function About() {
 					</div>
 					<textarea
 						placeholder="Type here..."
-						name="comments"
+						name="message"
 						id={styles.comments}
 						required
-					></textarea>
+					/>
 					<FormButton
 						text="Submit"
 						color="yellow"
