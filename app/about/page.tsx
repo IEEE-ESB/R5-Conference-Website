@@ -29,7 +29,7 @@ export default function About() {
 				image1="/kids_class_presentation.jpg"
 				image2="/kids_class_presentation.jpg"
 				image3="/kids_class_presentation.jpg"
-				position={[-45, 60]}
+				position={[-45, 50]}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
 				<h2 className={styles.missionTitle}>Our Mission</h2>
