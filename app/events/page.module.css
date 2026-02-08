@@ -1,0 +1,39 @@
+/* Event Cards */
+.eventContainer {
+	position: relative;
+	width: 30%;
+	height: fit-content;
+	border-radius: 2rem;
+	overflow: hidden;
+}
+
+.eventHead img {
+	object-fit: cover;
+}
+
+.lead {
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3rem;
+	border: 0.2rem white solid;
+	right: 1rem;
+	top: 1rem;
+}
+
+.eventBody {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--blue);
+	color: white;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+}
+
+.eventBody h3 {
+	color: var(--yellow);
+	font-size: 24px;
+	font-weight: 600;
+}
