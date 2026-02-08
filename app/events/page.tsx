@@ -5,12 +5,10 @@ import styles from "./page.module.css";
 
 function EventCard() {
 	return (
-		<div className={styles.eventContainer}>
+		<a className={styles.eventContainer} href="">
 			<div className={styles.eventHead}>
-				<div>
-					<img src="/kory.png" className={styles.lead} />
-				</div>
-				<img src="/hero.jpg" />
+				<img src="/kory.png" className={styles.eventLead} />
+				<img src="/hero.jpg" className={styles.eventPic} />
 			</div>
 			<div className={styles.eventBody}>
 				<h3>Sample Workshop</h3>
@@ -23,7 +21,7 @@ function EventCard() {
 					<li>LOCATION: EENGR</li>
 				</ul>
 			</div>
-		</div>
+		</a>
 	);
 }
 
@@ -34,8 +32,8 @@ export default function About() {
 				<img />
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
-			<AngledRectangle color="white" textColor="blue">
-				<div className={styles.mainEventContainer}>
+			<AngledRectangle color="white" textColor="blue" flipped={true}>
+				<a className={styles.mainEventContainer} href="">
 					<div className={styles.mainEventBody}>
 						<h3>Sample Workshop</h3>
 						<p>
@@ -48,15 +46,15 @@ export default function About() {
 						</ul>
 					</div>
 					<div className={styles.mainEventHead}>
-						<div>
-							<img src="/kory.png" className={styles.mainEventLead} />
-						</div>
+						<img src="/kory.png" className={styles.mainEventLead} />
 						<img src="/hero.jpg" className={styles.mainEventPic} />
 					</div>
-				</div>
+				</a>
 				<div className={styles.subEvents}>
 					<EventCard />
 					<EventCard />
+				</div>
+				<div className={styles.subEvents}>
 					<EventCard />
 					<EventCard />
 				</div>
@@ -66,7 +64,7 @@ export default function About() {
 				<h2>UPCOMING COMPETITIONS</h2>
 				<h2>UPCOMING COMPETITIONS</h2>
 			</div>
-			<AngledRectangle>
+			<AngledRectangle color="white" textColor="blue" flipped={true}>
 				<ImageStack image1="" image2="" image3="" position={[0, 0]} />
 				<div>
 					<img />
@@ -93,7 +91,7 @@ export default function About() {
 					<Button text="LEARN MORE" href="https://r5conferences.org" />
 				</div>
 			</AngledRectangle>
-			<AngledRectangle>
+			<AngledRectangle color="yellow" textColor="blue">
 				<ImageStack image1="" image2="" image3="" position={[0, 0]} />
 				<div>
 					<ul>

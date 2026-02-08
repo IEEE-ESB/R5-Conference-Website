@@ -3,11 +3,17 @@
 .mainEventContainer {
 	display: flex;
 	position: relative;
-	width: 75%;
+	width: 60%;
 	height: 20rem;
 	border-radius: 2rem;
 	overflow: hidden;
 	margin-bottom: 5rem;
+	transition: transform 0.3s ease;
+}
+
+.mainEventContainer:hover {
+	transform: translateY(-5%);
+	cursor: pointer;
 }
 
 .mainEventHead {
@@ -26,7 +32,7 @@
 	width: 5rem;
 	height: 5rem;
 	border-radius: 3rem;
-	border: 0.2rem white solid;
+	border: 0.2rem var(--white) solid;
 	right: 1rem;
 	top: 1rem;
 }
@@ -36,7 +42,8 @@
 	flex-direction: column;
 	gap: 2rem;
 	background-color: var(--blue);
-	color: white;
+	color: var(--white);
+	font-size: 18px;
 	height: 100%;
 	width: 100%;
 	padding: 2rem;
@@ -44,39 +51,69 @@
 
 .mainEventBody h3 {
 	color: var(--yellow);
-	font-size: 24px;
-	font-weight: 600;
+	font-size: 32px;
+	font-weight: 900;
 }
 
 /* Sub-Event Cards */
 .subEvents {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
+	display: flex;
 	width: 100%;
-	justify-items: center;
+	justify-content: center;
+	gap: 10rem;
 }
 
 .eventContainer {
 	position: relative;
-	width: 50%;
-	height: fit-content;
+	width: 25%;
+	height: 40rem;
 	border-radius: 2rem;
 	overflow: hidden;
 	margin-bottom: 5rem;
+	transition: transform 0.3s ease;
 }
 
-.eventHead img {
+.eventContainer:hover {
+	transform: translateY(-5%);
+	cursor: pointer;
+}
+
+.eventHead {
 	object-fit: cover;
+	height: 40%;
+	width: 100%;
 }
 
-.lead {
+.eventPic {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.eventLead {
 	position: absolute;
 	width: 5rem;
 	height: 5rem;
 	border-radius: 3rem;
-	border: 0.2rem white solid;
+	border: 0.2rem var(--white) solid;
 	right: 1rem;
 	top: 1rem;
+}
+
+.lead {
+	position: absolute;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	border: 0.2rem var(--white) solid;
+	right: 1rem;
+	top: 1rem;
+}
+
+.eventBody h3 {
+	color: var(--yellow);
+	font-size: 32px;
+	font-weight: 900;
 }
 
 .eventBody {
@@ -84,14 +121,9 @@
 	flex-direction: column;
 	gap: 2rem;
 	background-color: var(--blue);
-	color: white;
+	color: var(--white);
+	font-size: 18px;
 	height: 100%;
 	width: 100%;
 	padding: 2rem;
-}
-
-.eventBody h3 {
-	color: var(--yellow);
-	font-size: 24px;
-	font-weight: 600;
 }
