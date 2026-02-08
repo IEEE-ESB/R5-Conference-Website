@@ -1,10 +1,68 @@
-/* Event Cards */
+/* Main Event */
+
+.mainEventContainer {
+	display: flex;
+	position: relative;
+	width: 75%;
+	height: 20rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	margin-bottom: 5rem;
+}
+
+.mainEventHead {
+	object-fit: cover;
+	height: 100%;
+	width: 40%;
+}
+
+.mainEventPic {
+	object-fit: cover;
+	height: 100%;
+}
+
+.mainEventLead {
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3rem;
+	border: 0.2rem white solid;
+	right: 1rem;
+	top: 1rem;
+}
+
+.mainEventBody {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--blue);
+	color: white;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+}
+
+.mainEventBody h3 {
+	color: var(--yellow);
+	font-size: 24px;
+	font-weight: 600;
+}
+
+/* Sub-Event Cards */
+.subEvents {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	width: 100%;
+	justify-items: center;
+}
+
 .eventContainer {
 	position: relative;
-	width: 30%;
+	width: 50%;
 	height: fit-content;
 	border-radius: 2rem;
 	overflow: hidden;
+	margin-bottom: 5rem;
 }
 
 .eventHead img {

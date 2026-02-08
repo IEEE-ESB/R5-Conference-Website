@@ -3,10 +3,6 @@ import Button from "../components/Button/Button";
 import ImageStack from "../components/ImageStack/ImageStack";
 import styles from "./page.module.css";
 
-function MainEvent() {
-	return <div></div>;
-}
-
 function EventCard() {
 	return (
 		<div className={styles.eventContainer}>
@@ -39,11 +35,31 @@ export default function About() {
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue">
-				<MainEvent />
-				<EventCard />
-				<EventCard />
-				<EventCard />
-				<EventCard />
+				<div className={styles.mainEventContainer}>
+					<div className={styles.mainEventBody}>
+						<h3>Sample Workshop</h3>
+						<p>
+							A workshop with the purpose of being a placeholder for the website
+							to see it's design.
+						</p>
+						<ul>
+							<li>WHEN: TBD</li>
+							<li>LOCATION: EENGR</li>
+						</ul>
+					</div>
+					<div className={styles.mainEventHead}>
+						<div>
+							<img src="/kory.png" className={styles.mainEventLead} />
+						</div>
+						<img src="/hero.jpg" className={styles.mainEventPic} />
+					</div>
+				</div>
+				<div className={styles.subEvents}>
+					<EventCard />
+					<EventCard />
+					<EventCard />
+					<EventCard />
+				</div>
 			</AngledRectangle>
 			<div>
 				<h2>UPCOMING COMPETITIONS</h2>
