@@ -72,6 +72,9 @@ export default function About() {
 				flipped={true}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
+				<div className="r5logo">
+					<img src="/hero.jpg" />
+				</div>
 				<div className={styles.r5container}>
 					<div className={styles.r5body}>
 						<img className={styles.r5image} />
@@ -87,15 +90,23 @@ export default function About() {
 							design challenges. They also develop professional skills while
 							connecting with peers and industry professionals.
 						</p>
-						<ul className={styles.r5comps}>
-							<li>Robotics</li>
-							<li>Circuits</li>
-							<li>Ethics</li>
-							<li>Cyber Security</li>
-							<li>3 Minute Thesis</li>
-							<li>Branch Website</li>
-						</ul>
-						<Button text="LEARN MORE" href="https://r5conferences.org" />
+						<div className={styles.r5comps}>
+							<img src="/hero.jpg" />
+							<div>
+								<h3>Competitions:</h3>
+								<ul>
+									<li>Robotics</li>
+									<li>Circuits</li>
+									<li>Ethics</li>
+									<li>Cyber Security</li>
+									<li>3 Minute Thesis</li>
+									<li>Branch Website</li>
+								</ul>
+								<div className={styles.r5button}>
+									<Button text="LEARN MORE" href="https://r5conferences.org" />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</AngledRectangle>

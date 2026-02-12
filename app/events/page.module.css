@@ -135,10 +135,60 @@
 	flex-direction: column;
 	align-items: flex-end;
 	width: 100%;
-	height: 100%;
+	height: 40rem;
+}
+
+.r5logo img {
+	display: block;
+	object-fit: cover;
+	border: 10px white solid;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+	border-radius: 3px;
+	width: 10rem;
+	height: 10rem;
 }
 
 .r5body {
 	width: 50%;
 	height: 100%;
+}
+
+.r5comps {
+	position: absolute;
+	display: flex;
+	gap: 5rem;
+	color: var(--yellow);
+	margin: 2rem 0 2rem 0;
+	font-size: 28px;
+	font-weight: 700;
+	right: 7%;
+}
+
+.r5comps h3 {
+	font-size: 32px;
+}
+
+.r5comps img {
+	display: block;
+	object-fit: cover;
+	border: 10px white solid;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+	border-radius: 3px;
+	width: 35rem;
+	height: 20rem;
+}
+
+.r5button {
+	margin-top: 5rem;
+}
+
+.r5body p {
+	font-size: 24px;
+}
+
+.r5date {
+	font-size: 28px;
+	font-weight: 900;
+	color: var(--yellow);
+	margin: -7rem 0 5rem 0;
 }
