@@ -127,3 +127,18 @@
 	width: 100%;
 	padding: 2rem;
 }
+
+/* Region 5 */
+
+.r5container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+	height: 100%;
+}
+
+.r5body {
+	width: 50%;
+	height: 100%;
+}

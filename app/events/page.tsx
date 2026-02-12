@@ -64,35 +64,48 @@ export default function About() {
 				<h2>UPCOMING COMPETITIONS</h2>
 				<h2>UPCOMING COMPETITIONS</h2>
 			</div>
+			<ImageStack
+				image1="hero.jpg"
+				image2="hero.jpg"
+				image3="hero.jpg"
+				position={[0, 15]}
+				flipped={true}
+			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
-				<ImageStack image1="" image2="" image3="" position={[0, 0]} />
-				<div>
-					<img />
-					<ul>
-						<li>Date: April 4-6, 2025</li>
-						<li>Location: Witchita, Kansas</li>
-						<li>Region: IEEE Region 5 - Central U.S.</li>
-					</ul>
-					<p>
-						The IEEE Region 5 student competitions bring together students from
-						across the central U.S. to showcase their skills, creativity, and
-						innovation. Participants compete in technical, ethical, and design
-						challenges. They also develop professional skills while connecting
-						with peers and industry professionals.
-					</p>
-					<ul>
-						<li>Robotics</li>
-						<li>Circuits</li>
-						<li>Ethics</li>
-						<li>Cyber Security</li>
-						<li>3 Minute Thesis</li>
-						<li>Branch Website</li>
-					</ul>
-					<Button text="LEARN MORE" href="https://r5conferences.org" />
+				<div className={styles.r5container}>
+					<div className={styles.r5body}>
+						<img className={styles.r5image} />
+						<ul className={styles.r5date}>
+							<li>Date: April 4-6, 2025</li>
+							<li>Location: Witchita, Kansas</li>
+							<li>Region: IEEE Region 5 - Central U.S.</li>
+						</ul>
+						<p>
+							The IEEE Region 5 student competitions bring together students
+							from across the central U.S. to showcase their skills, creativity,
+							and innovation. Participants compete in technical, ethical, and
+							design challenges. They also develop professional skills while
+							connecting with peers and industry professionals.
+						</p>
+						<ul className={styles.r5comps}>
+							<li>Robotics</li>
+							<li>Circuits</li>
+							<li>Ethics</li>
+							<li>Cyber Security</li>
+							<li>3 Minute Thesis</li>
+							<li>Branch Website</li>
+						</ul>
+						<Button text="LEARN MORE" href="https://r5conferences.org" />
+					</div>
 				</div>
 			</AngledRectangle>
+			<ImageStack
+				image1="hero.jpg"
+				image2="hero.jpg"
+				image3="hero.jpg"
+				position={[0, 0]}
+			/>
 			<AngledRectangle color="yellow" textColor="blue">
-				<ImageStack image1="" image2="" image3="" position={[0, 0]} />
 				<div>
 					<ul>
 						<li>Date: October 25, 2025 (October 24, 2025)</li>
