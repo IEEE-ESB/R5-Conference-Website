@@ -28,11 +28,11 @@ function EventCard() {
 export default function About() {
 	return (
 		<div>
-			<AngledRectangle color="yellow" textColor="white">
+			<AngledRectangle color="yellow" textColor="white" flipped={true}>
 				<img />
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
-			<AngledRectangle color="white" textColor="blue" flipped={true}>
+			<AngledRectangle color="white" textColor="blue">
 				<a className={styles.mainEventContainer} href="">
 					<div className={styles.mainEventBody}>
 						<h3>Sample Workshop</h3>
@@ -59,7 +59,8 @@ export default function About() {
 					<EventCard />
 				</div>
 			</AngledRectangle>
-			<div>
+			<div className={styles.compLine} />
+			<div className={styles.compContainer}>
 				<h2>UPCOMING COMPETITIONS</h2>
 				<h2>UPCOMING COMPETITIONS</h2>
 				<h2>UPCOMING COMPETITIONS</h2>
@@ -68,7 +69,7 @@ export default function About() {
 				image1="hero.jpg"
 				image2="hero.jpg"
 				image3="hero.jpg"
-				position={[0, 15]}
+				position={[3, 15]}
 				flipped={true}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
@@ -111,20 +112,23 @@ export default function About() {
 				image1="hero.jpg"
 				image2="hero.jpg"
 				image3="hero.jpg"
-				position={[0, 0]}
+				position={[7, 50]}
 			/>
 			<AngledRectangle color="yellow" textColor="blue">
-				<div>
-					<ul>
-						<li>Date: October 25, 2025 (October 24, 2025)</li>
-						<li>Time: 00:00 UTC (7:00 PM CDT)</li>
-						<li>Registration Deadline: October 21, 2025</li>
-					</ul>
-					<p>
-						IEEE Xtreme is a global, 24-hour online programming competition
-						where teams of IEEE student members solve a series of challenging
-						problems to test their coding and critical thinking skills.
-					</p>
+				<div className={styles.xtremeContainer}>
+					<div className={styles.xtremeBody}>
+						<img className={styles.xtremeLogo} src="region-5.webp" />
+						<ul className={styles.xtremeDate}>
+							<li>Date: October 25, 2025 (October 24, 2025)</li>
+							<li>Time: 00:00 UTC (7:00 PM CDT)</li>
+							<li>Registration Deadline: October 21, 2025</li>
+						</ul>
+						<p>
+							IEEE Xtreme is a global, 24-hour online programming competition
+							where teams of IEEE student members solve a series of challenging
+							problems to test their coding and critical thinking skills.
+						</p>
+					</div>
 					<Button text="LEARN MORE" href="https://ieeextreme.org" />
 				</div>
 			</AngledRectangle>

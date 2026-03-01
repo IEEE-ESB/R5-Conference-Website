@@ -128,6 +128,41 @@
 	padding: 2rem;
 }
 
+/* Competitions Banner */
+
+.compLine {
+	background-color: var(--yellow);
+	height: 4rem;
+	width: 99.9%;
+	transform: translateX(-5rem);
+	transform: rotate(-2.5deg);
+	margin: 2rem 0 -5rem 0;
+	clip-path: polygon(0 0, calc(100% + 1rem) 0, 100% 100%, 0rem 100%);
+}
+
+.compContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--blue);
+	height: 30rem;
+}
+
+.compContainer h2 {
+	transform: rotate(-2.5deg);
+	color: var(--blue);
+	font-size: 80px;
+	line-height: 1;
+	font-weight: 900;
+	/* text-shadow:
+		-5px -5px 0 var(--yellow),
+		5px -5px 0 var(--yellow),
+		-5px 5px 0 var(--yellow),
+		5px 5px 0 var(--yellow); */
+	-webkit-text-stroke: 5px var(--yellow);
+}
+
 /* Region 5 */
 
 .r5container {
@@ -189,4 +224,39 @@
 	font-weight: 900;
 	color: var(--yellow);
 	margin: -7rem 0 5rem 0;
+}
+
+/* Xtreme */
+
+.xtremeContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	height: 40rem;
+}
+
+.xtremeLogo {
+	position: absolute;
+	left: 6rem;
+	top: 3rem;
+	width: auto;
+	height: 8rem;
+}
+
+.xtremeBody {
+	width: 50%;
+	height: fit-content;
+	margin-bottom: 3rem;
+}
+
+.xtremeBody p {
+	font-size: 24px;
+}
+
+.xtremeDate {
+	font-size: 28px;
+	font-weight: 900;
+	color: var(--blue);
+	margin: 0rem 0 5rem 0;
 }
