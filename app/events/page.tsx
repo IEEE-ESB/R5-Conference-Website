@@ -72,12 +72,9 @@ export default function About() {
 				flipped={true}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
-				<div className="r5logo">
-					<img src="/hero.jpg" />
-				</div>
 				<div className={styles.r5container}>
 					<div className={styles.r5body}>
-						<img className={styles.r5image} />
+						<img className={styles.r5logo} src="region-5.webp" />
 						<ul className={styles.r5date}>
 							<li>Date: April 4-6, 2025</li>
 							<li>Location: Witchita, Kansas</li>

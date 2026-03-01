@@ -138,14 +138,12 @@
 	height: 40rem;
 }
 
-.r5logo img {
-	display: block;
-	object-fit: cover;
-	border: 10px white solid;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
-	border-radius: 3px;
-	width: 10rem;
-	height: 10rem;
+.r5logo {
+	position: absolute;
+	right: 3rem;
+	top: 3rem;
+	width: auto;
+	height: 8rem;
 }
 
 .r5body {
