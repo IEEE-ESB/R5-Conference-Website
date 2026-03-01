@@ -261,3 +261,9 @@ body {
 	letter-spacing: 1px;
 	opacity: 0.6;
 }
+
+html,
+body {
+	width: 100vw;
+	overflow-x: hidden;
+}
