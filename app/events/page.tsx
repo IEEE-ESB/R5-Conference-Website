@@ -2,30 +2,57 @@ import AngledRectangle from "../components/AngledRectangle/AngledRectangle";
 import Button from "../components/Button/Button";
 import ImageStack from "../components/ImageStack/ImageStack";
 import styles from "./page.module.css";
+import PocketBase from "pocketbase";
 
-function EventCard() {
+const pb = new PocketBase("https://db.ieee-esb.org");
+
+type EventData = {
+	title: string;
+	description: string;
+	when: Date;
+	where: string;
+	who: string[];
+	image: string;
+};
+
+function EventCard({ event }: { event?: EventData }) {
 	return (
 		<a className={styles.eventContainer} href="">
 			<div className={styles.eventHead}>
 				<img src="/kory.png" className={styles.eventLead} />
-				<img src="/hero.jpg" className={styles.eventPic} />
+				<img src={event?.image} className={styles.eventPic} />
 			</div>
 			<div className={styles.eventBody}>
-				<h3>Sample Workshop</h3>
-				<p>
-					A workshop with the purpose of being a placeholder for the website to
-					see it's design.
-				</p>
+				<h3>{event?.title ?? "TBD"}</h3>
+				<p>{event?.description ?? ""}</p>
 				<ul>
-					<li>WHEN: TBD</li>
-					<li>LOCATION: EENGR</li>
+					<li>WHEN: {event?.when.toLocaleDateString() ?? "TBD"}</li>
+					<li>LOCATION: {event?.where ?? "TBD"}</li>
 				</ul>
 			</div>
 		</a>
 	);
 }
 
-export default function About() {
+export default async function Events() {
+	const DBevents = await pb.collection("events").getList(1, 5, {
+		sort: "-when",
+	});
+
+	const events = DBevents.items.map((event) => {
+		let newevent: EventData = {
+			title: event["title"] as string,
+			description: event["description"] as string,
+			when: new Date(event["when"] as string),
+			where: event["where"] as string,
+			who: event["who"] as string[],
+			image: event["image"] as string,
+		};
+		if (newevent.description.length > 150)
+			newevent.description = newevent.description.slice(0, 150) + "...";
+		return newevent;
+	});
+
 	return (
 		<div>
 			<AngledRectangle color="yellow" textColor="white" flipped={true}>
@@ -51,12 +78,12 @@ export default function About() {
 					</div>
 				</a>
 				<div className={styles.subEvents}>
-					<EventCard />
-					<EventCard />
+					<EventCard event={events[1]} />
+					<EventCard event={events[2]} />
 				</div>
 				<div className={styles.subEvents}>
-					<EventCard />
-					<EventCard />
+					<EventCard event={events[3]} />
+					<EventCard event={events[4]} />
 				</div>
 			</AngledRectangle>
 			<div className={styles.compLine} />
