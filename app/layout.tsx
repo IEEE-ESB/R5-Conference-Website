@@ -92,12 +92,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				{/*<Header />*/}
-				{/*<div style={{ marginTop: "5rem" }} />*/}
+				<Header />
+				{<div style={{ marginTop: "5rem" }} />}
 				{children}
-				{
-					//<Footer />
-				}
+				<Footer />
 			</body>
 		</html>
 	);
