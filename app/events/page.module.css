@@ -20,10 +20,12 @@
 	object-fit: cover;
 	height: 100%;
 	width: 40%;
+	background-color: var(--blue);
 }
 
 .mainEventPic {
 	object-fit: cover;
+	width: 100%;
 	height: 100%;
 }
 
@@ -82,6 +84,7 @@
 	object-fit: cover;
 	height: 40%;
 	width: 100%;
+	background-color: var(--blue);
 }
 
 .eventPic {
@@ -241,7 +244,7 @@
 	left: 6rem;
 	top: 3rem;
 	width: auto;
-	height: 8rem;
+	height: 10rem;
 }
 
 .xtremeBody {

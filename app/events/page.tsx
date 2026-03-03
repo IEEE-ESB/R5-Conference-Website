@@ -7,20 +7,22 @@ import PocketBase from "pocketbase";
 const pb = new PocketBase("https://db.ieee-esb.org");
 
 type EventData = {
+	id: string;
 	title: string;
 	description: string;
 	when: Date;
 	where: string;
 	who: string[];
 	image: string;
+	link: string;
 };
 
 function EventCard({ event }: { event?: EventData }) {
 	return (
-		<a className={styles.eventContainer} href="">
+		<a className={styles.eventContainer} href={event?.link} target="_blank">
 			<div className={styles.eventHead}>
 				<img src="/kory.png" className={styles.eventLead} />
-				<img src={event?.image} className={styles.eventPic} />
+				<img src={event?.image || '/under_construction.png'} className={styles.eventPic} />
 			</div>
 			<div className={styles.eventBody}>
 				<h3>{event?.title ?? "TBD"}</h3>
@@ -35,23 +37,30 @@ function EventCard({ event }: { event?: EventData }) {
 }
 
 export default async function Events() {
+	const baseFileURL = 'https://db.ieee-esb.org/api/files/events/'
+
 	const DBevents = await pb.collection("events").getList(1, 5, {
 		sort: "-when",
 	});
 
 	const events = DBevents.items.map((event) => {
 		let newevent: EventData = {
+			id: event['id'] as string,
 			title: event["title"] as string,
 			description: event["description"] as string,
 			when: new Date(event["when"] as string),
 			where: event["where"] as string,
 			who: event["who"] as string[],
-			image: event["image"] as string,
+			image: event['image'] ? baseFileURL + event["id"] + '/' + event["image"] : '' as string,
+			link: event['vlink']
 		};
 		if (newevent.description.length > 150)
 			newevent.description = newevent.description.slice(0, 150) + "...";
 		return newevent;
 	});
+
+	const mainEvent = events[0];
+	console.log(mainEvent.image)
 
 	return (
 		<div>
@@ -60,21 +69,20 @@ export default async function Events() {
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue">
-				<a className={styles.mainEventContainer} href="">
+				<a className={styles.mainEventContainer} href={mainEvent.link} target="_blank">
 					<div className={styles.mainEventBody}>
-						<h3>Sample Workshop</h3>
+						<h3>{mainEvent.title}</h3>
 						<p>
-							A workshop with the purpose of being a placeholder for the website
-							to see it's design.
+							{mainEvent.description}
 						</p>
 						<ul>
-							<li>WHEN: TBD</li>
-							<li>LOCATION: EENGR</li>
+							<li>WHEN: {mainEvent.when.getDate()}</li>
+							<li>LOCATION: {mainEvent.where}</li>
 						</ul>
 					</div>
 					<div className={styles.mainEventHead}>
 						<img src="/kory.png" className={styles.mainEventLead} />
-						<img src="/hero.jpg" className={styles.mainEventPic} />
+						<img src={mainEvent.image || '/under_construction.png'} className={styles.mainEventPic} />
 					</div>
 				</a>
 				<div className={styles.subEvents}>
@@ -128,7 +136,7 @@ export default async function Events() {
 									<li>Branch Website</li>
 								</ul>
 								<div className={styles.r5button}>
-									<Button text="LEARN MORE" href="https://r5conferences.org" />
+									<Button text="LEARN MORE" href="https://r5conferences.org" target="_blank" />
 								</div>
 							</div>
 						</div>
@@ -144,7 +152,7 @@ export default async function Events() {
 			<AngledRectangle color="yellow" textColor="blue">
 				<div className={styles.xtremeContainer}>
 					<div className={styles.xtremeBody}>
-						<img className={styles.xtremeLogo} src="region-5.webp" />
+						<img className={styles.xtremeLogo} src="xtreme_logo.png" />
 						<ul className={styles.xtremeDate}>
 							<li>Date: October 25, 2025 (October 24, 2025)</li>
 							<li>Time: 00:00 UTC (7:00 PM CDT)</li>
@@ -156,7 +164,7 @@ export default async function Events() {
 							problems to test their coding and critical thinking skills.
 						</p>
 					</div>
-					<Button text="LEARN MORE" href="https://ieeextreme.org" />
+					<Button text="LEARN MORE" href="https://ieeextreme.org" target="_blank" />
 				</div>
 			</AngledRectangle>
 		</div>
