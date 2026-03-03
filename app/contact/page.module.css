@@ -112,27 +112,19 @@
 	color: var(--white);
 }
 
-.spacing {
-	margin: 3vw 0;
-}
-
 /* Location Section */
 .locationSection {
 	width: 100%;
-	height: 80vh;
 }
 
 .mapContainer {
 	margin-top: 3.6%;
 	position: relative;
 	width: 100%;
-	overflow: hidden;
 }
 
 .locationOverlay {
 	position: absolute;
-	top: 50%;
-	left: 0;
 	transform: translateY(-50%);
 	/* padding: 3rem; */
 	margin: 3rem;
