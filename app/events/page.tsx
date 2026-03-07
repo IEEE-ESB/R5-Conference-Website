@@ -22,7 +22,10 @@ function EventCard({ event }: { event?: EventData }) {
 		<a className={styles.eventContainer} href={event?.link} target="_blank">
 			<div className={styles.eventHead}>
 				<img src="/kory.png" className={styles.eventLead} />
-				<img src={event?.image || '/under_construction.png'} className={styles.eventPic} />
+				<img
+					src={event?.image || "/under_construction.png"}
+					className={styles.eventPic}
+				/>
 			</div>
 			<div className={styles.eventBody}>
 				<h3>{event?.title ?? "TBD"}</h3>
@@ -37,7 +40,7 @@ function EventCard({ event }: { event?: EventData }) {
 }
 
 export default async function Events() {
-	const baseFileURL = 'https://db.ieee-esb.org/api/files/events/'
+	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
 
 	const DBevents = await pb.collection("events").getList(1, 5, {
 		sort: "-when",
@@ -45,14 +48,16 @@ export default async function Events() {
 
 	const events = DBevents.items.map((event) => {
 		let newevent: EventData = {
-			id: event['id'] as string,
+			id: event["id"] as string,
 			title: event["title"] as string,
 			description: event["description"] as string,
 			when: new Date(event["when"] as string),
 			where: event["where"] as string,
 			who: event["who"] as string[],
-			image: event['image'] ? baseFileURL + event["id"] + '/' + event["image"] : '' as string,
-			link: event['vlink']
+			image: event["image"]
+				? baseFileURL + event["id"] + "/" + event["image"]
+				: ("" as string),
+			link: event["vlink"],
 		};
 		if (newevent.description.length > 150)
 			newevent.description = newevent.description.slice(0, 150) + "...";
@@ -60,21 +65,22 @@ export default async function Events() {
 	});
 
 	const mainEvent = events[0];
-	console.log(mainEvent.image)
+	console.log(mainEvent.image);
 
 	return (
 		<div>
 			<AngledRectangle color="yellow" textColor="white" flipped={true}>
-				<img />
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue">
-				<a className={styles.mainEventContainer} href={mainEvent.link} target="_blank">
+				<a
+					className={styles.mainEventContainer}
+					href={mainEvent.link}
+					target="_blank"
+				>
 					<div className={styles.mainEventBody}>
 						<h3>{mainEvent.title}</h3>
-						<p>
-							{mainEvent.description}
-						</p>
+						<p>{mainEvent.description}</p>
 						<ul>
 							<li>WHEN: {mainEvent.when.getDate()}</li>
 							<li>LOCATION: {mainEvent.where}</li>
@@ -82,7 +88,10 @@ export default async function Events() {
 					</div>
 					<div className={styles.mainEventHead}>
 						<img src="/kory.png" className={styles.mainEventLead} />
-						<img src={mainEvent.image || '/under_construction.png'} className={styles.mainEventPic} />
+						<img
+							src={mainEvent.image || "/under_construction.png"}
+							className={styles.mainEventPic}
+						/>
 					</div>
 				</a>
 				<div className={styles.subEvents}>
@@ -136,7 +145,11 @@ export default async function Events() {
 									<li>Branch Website</li>
 								</ul>
 								<div className={styles.r5button}>
-									<Button text="LEARN MORE" href="https://r5conferences.org" target="_blank" />
+									<Button
+										text="LEARN MORE"
+										href="https://r5conferences.org"
+										target="_blank"
+									/>
 								</div>
 							</div>
 						</div>
@@ -164,7 +177,11 @@ export default async function Events() {
 							problems to test their coding and critical thinking skills.
 						</p>
 					</div>
-					<Button text="LEARN MORE" href="https://ieeextreme.org" target="_blank" />
+					<Button
+						text="LEARN MORE"
+						href="https://ieeextreme.org"
+						target="_blank"
+					/>
 				</div>
 			</AngledRectangle>
 		</div>
