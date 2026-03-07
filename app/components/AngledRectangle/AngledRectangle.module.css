@@ -22,11 +22,11 @@
 }
 
 .angled_rectangle.right {
-	clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+	clip-path: polygon(0 0, 100% 4.9rem, 100% calc(100% - 4.9rem), 0 100%);
 }
 
 .angled_rectangle.left {
-	clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 95%);
+	clip-path: polygon(0 5.1rem, 100% 0%, 100% 100%, 0 calc(100% - 4.9rem));
 }
 
 .angled_rectangle.yellow {

@@ -17,16 +17,19 @@ export default function Button({
 	text,
 	color = "blue",
 	textColor = "white",
+	target = ""
 }: {
 	href?: string;
 	text: string;
 	color?: "blue" | "white" | "yellow";
 	textColor?: "blue" | "white" | "yellow";
+	target?: "_blank" | "";
 }) {
 	return (
 		<a
 			href={href}
 			className={`${styles.button} ${baseColor[color]} ${textColors[textColor]}`}
+			target={target}
 		>
 			{text}
 		</a>
