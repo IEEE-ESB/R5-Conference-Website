@@ -88,7 +88,7 @@
 }
 
 .button.blueText:hover {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 .button.white {
@@ -100,11 +100,11 @@
 }
 
 .button.whiteText:hover {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 .button.yellow {
-	background-color: var(--yellow);
+	background-color: var(--orange);
 }
 
 .button.yellow.blueText:hover {
@@ -112,7 +112,7 @@
 }
 
 .button.yellowText {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 .button.yellowText:hover {

@@ -52,7 +52,7 @@
 }
 
 .mainEventBody h3 {
-	color: var(--yellow);
+	color: var(--orange);
 	font-size: 32px;
 	font-weight: 900;
 }
@@ -114,7 +114,7 @@
 }
 
 .eventBody h3 {
-	color: var(--yellow);
+	color: var(--orange);
 	font-size: 32px;
 	font-weight: 900;
 }
@@ -134,7 +134,7 @@
 /* Competitions Banner */
 
 .compLine {
-	background-color: var(--yellow);
+	background-color: var(--orange);
 	height: 4rem;
 	width: 99.9%;
 	transform: translateX(-5rem);
@@ -160,11 +160,11 @@
 	line-height: 1;
 	font-weight: 900;
 	/* text-shadow:
-		-5px -5px 0 var(--yellow),
-		5px -5px 0 var(--yellow),
-		-5px 5px 0 var(--yellow),
-		5px 5px 0 var(--yellow); */
-	-webkit-text-stroke: 5px var(--yellow);
+		-5px -5px 0 var(--orange),
+		5px -5px 0 var(--orange),
+		-5px 5px 0 var(--orange),
+		5px 5px 0 var(--orange); */
+	-webkit-text-stroke: 5px var(--orange);
 }
 
 /* Region 5 */
@@ -194,7 +194,7 @@
 	position: absolute;
 	display: flex;
 	gap: 5rem;
-	color: var(--yellow);
+	color: var(--orange);
 	margin: 2rem 0 2rem 0;
 	font-size: 28px;
 	font-weight: 700;
@@ -226,7 +226,7 @@
 .r5date {
 	font-size: 28px;
 	font-weight: 900;
-	color: var(--yellow);
+	color: var(--orange);
 	margin: -4rem 0 3rem 0;
 }
 

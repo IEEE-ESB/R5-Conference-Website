@@ -38,7 +38,7 @@
 
 .button {
 	border-radius: 40px;
-	background-color: var(--yellow);
+	background-color: var(--orange);
 	color: var(--blue);
 	font-size: 30px;
 	font-weight: 800;
@@ -85,7 +85,7 @@
 }
 
 .eventInfo {
-	background: var(--yellow);
+	background: var(--orange);
 	padding: 2rem 2rem 8rem;
 	color: var(--blue);
 	border-radius: 0 0 64px 64px;

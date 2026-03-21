@@ -4,7 +4,7 @@
 	--background: #ffffff;
 	--foreground: #171717;
 	--blue: #002855;
-	--yellow: #FFA300;
+	--orange: #FFA300;
 	--white: #fff;
 }
 
@@ -27,71 +27,13 @@ body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000; /* stays above all content */
-	background-color: #002855; /* IEEE dark blue */
-	height: 5rem;
-	display: flex;
-	align-items: center;
-	padding: 0 48px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	margin-bottom: 3rem;
-}
-
-.navbar-logo {
-	height: 36px;
-	width: auto;
-}
-
-.navbar-title {
-	color: var(--white);
-	font-size: 30px;
-	/* font-weight: 600; */
-	font-style: italic;
-	letter-spacing: 0.3px;
-	white-space: nowrap;
-}
-
-.navbar-left {
-	display: flex;
-	align-items: center;
-	gap: 24px;
-}
-
-.navbar-menu {
-	margin-left: auto;
-	display: flex;
-	align-items: center;
-	gap: 32px;
-}
-
-.navbar-menu a {
-	color: var(--white);
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: bolder;
-	letter-spacing: 0.6px;
-	text-transform: uppercase;
-	position: relative;
-	padding-bottom: 4px;
-}
-
-.navbar-menu a:hover {
-	color: var(--yellow);
-}
-
 .footer {
 	background-color: var(--blue);
 	color: var(--white);
 	padding: 60px 80px 24px;
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	z-index: 999;
-	position: absolute;
+	position: relative;
 	width: 100%;
 }
 
@@ -125,7 +67,7 @@ body {
 }
 
 .footer-nav a:hover {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 /* Social Icons */

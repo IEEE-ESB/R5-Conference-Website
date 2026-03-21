@@ -33,7 +33,7 @@
 }
 
 .angled_rectangle.yellow {
-	background: var(--yellow);
+	background: var(--orange);
 }
 
 .angled_rectangle.white {
@@ -45,7 +45,7 @@
 }
 
 .angled_rectangle.text_yellow {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 .angled_rectangle.text_white {
