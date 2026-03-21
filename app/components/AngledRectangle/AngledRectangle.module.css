@@ -8,10 +8,11 @@
 	margin: -5rem 0;
 	padding: 5rem 0;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .angled_rectangle h1 {
-	font-size: 6vw;
+	font-size: 5rem;
 	font-weight: 900;
 	/* text-align: left; */
 	/* margin-bottom: 5rem; */
@@ -19,6 +20,8 @@
 	line-height: 1;
 	padding-bottom: 3rem;
 	text-align: left;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .angled_rectangle.right {
