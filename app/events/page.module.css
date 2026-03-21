@@ -149,7 +149,8 @@
 	align-items: center;
 	justify-content: center;
 	background-color: var(--blue);
-	height: 30rem;
+	height: fit-content;
+	padding: 6rem 0 4rem 0;
 }
 
 .compContainer h2 {
@@ -226,7 +227,7 @@
 	font-size: 28px;
 	font-weight: 900;
 	color: var(--yellow);
-	margin: -7rem 0 5rem 0;
+	margin: -4rem 0 3rem 0;
 }
 
 /* Xtreme */
