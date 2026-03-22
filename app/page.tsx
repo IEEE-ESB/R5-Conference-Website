@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 function EventCard() {
 	return (
-		<a href="#" target="_blank" className={styles.eventCard}>
+		<a href="#" target="_blank" className={`${styles.eventCard}`}>
 			<div className={styles.eventImage}>
 				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
 			</div>
@@ -83,7 +83,7 @@ export default function Home() {
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="white" textColor="blue">
 				<h1>Upcoming Events</h1>
-				<div className={styles.events}>
+				<div className="container flex xl:justify-evenly max-xl:flex-col items-center gap-32">
 					<EventCard />
 					<EventCard />
 					<EventCard />
@@ -93,7 +93,7 @@ export default function Home() {
 				</div>
 			</AngledRectangle>
 			<AngledRectangle>
-				<div className={styles.aboutFlex}>
+				<div className="container flex lg:justify-center max-lg:flex-col gap-16">
 					<div className={styles.aboutContent}>
 						<h1>Become A Member</h1>
 						<p>
@@ -110,17 +110,15 @@ export default function Home() {
 					</div>
 					<img
 						src="/2024_group_pic.jpeg"
-						width="50%"
-						className={styles.contentImg}
+						className={`${styles.contentImg} lg:w-1/2`}
 					/>
 				</div>
 			</AngledRectangle>
 			<AngledRectangle flipped={true} color="yellow" textColor="blue">
-				<div className={styles.aboutFlex}>
+				<div className="container flex lg:justify-center max-lg:flex-col gap-16">
 					<img
 						src="/kids_class_presentation.jpg"
-						width="50%"
-						className={styles.contentImg}
+						className={`${styles.contentImg} lg:w-1/2`}
 					/>
 					<div className={styles.aboutContent}>
 						<h1>Want To Collaborate?</h1>
@@ -140,7 +138,7 @@ export default function Home() {
 			</AngledRectangle>
 			<AngledRectangle>
 				<h1>Meet Our Team</h1>
-				<div className={styles.aboutFlex}>
+				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
 					<LeadershipCard
 						name="Diego Sauceda"
 						role="President"
@@ -195,10 +193,10 @@ export default function Home() {
 						referrerPolicy="no-referrer-when-downgrade"
 					></iframe>
 					<div className={styles.locationOverlay}>
-						<h1>
+						<h1 className="text-6xl lg:text-8xl">
 							Our <br /> Location
 						</h1>
-						<p className={styles.locationSubtitle}>UTRGV EENGR 2.296</p>
+						<p className="text-2xl lg:text-4xl">UTRGV EENGR 2.296</p>
 					</div>
 				</div>
 			</div>
