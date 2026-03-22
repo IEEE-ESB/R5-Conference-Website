@@ -7,7 +7,7 @@ export default function About() {
 		<div>
 			<AngledRectangle color="yellow" textColor="blue">
 				<div className={styles.aboutContainer}>
-					<div>
+					<div className="lg:w-1/2 max-lg:w-full">
 						<h1>About Us</h1>
 						<p>
 							The Institute of Electrical and Electronics Engineers - Edinburg
@@ -43,7 +43,7 @@ export default function About() {
 			<img src="/hero.jpg" className={styles.video} />
 			{/* This will be the video */}
 			<AngledRectangle color="blue" textColor="white" flipped={true}>
-				<div className={styles.valuesContainer}>
+				<div className={`${styles.valuesContainer} container flex lg:justify-evenly max-lg:flex-col items-center gap-16`}>
 					<div>
 						<h2>Our</h2>
 						<h2>Values</h2>
