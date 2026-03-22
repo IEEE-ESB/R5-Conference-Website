@@ -1,29 +1,40 @@
 import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
 import Button from "./components/Button/Button";
 import styles from "./page.module.css";
+import PocketBase from "pocketbase";
 
-function EventCard() {
+type EventData = {
+	id: string;
+	title: string;
+	description: string;
+	when: Date;
+	where: string;
+	who: string[];
+	image: string;
+	link: string;
+};
+
+function EventCard({ event }: { event?: EventData }) {
 	return (
 		<a href="#" target="_blank" className={`${styles.eventCard}`}>
 			<div className={styles.eventImage}>
-				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src={event?.image ?? "/hero.jpg"} alt="" style={{ objectFit: "cover" }} />
 			</div>
 
 			<div className={styles.eventInfo}>
-				<h2 className={styles.eventTitle}>Event Title</h2>
+				<h2 className={styles.eventTitle}>{event?.title ?? "Event Title"}</h2>
 				<p className={styles.eventDescription}>
-					Nulla labore ea eiusmod ea excepteur minim cillum sunt consequat elit
-					sint do duis amet.
+					{event?.description ?? "Coming soon..."}
 				</p>
 
 				<div className={styles.eventDetails}>
-					<p>TIME: 5pm 04/01/2067</p>
-					<p>LOCATION: UTRGV</p>
+					<p>TIME: {event?.when.toLocaleTimeString() ?? "TBD"}</p>
+					<p>LOCATION: {event?.where ?? "TBD"}</p>
 				</div>
 			</div>
 
 			<div className={styles.eventHost}>
-				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src={event?.who[0] ?? "/hero.jpg"} alt="" style={{ objectFit: "cover" }} />
 			</div>
 		</a>
 	);
@@ -55,7 +66,33 @@ function LeadershipCard({
 	);
 }
 
-export default function Home() {
+const pb = new PocketBase("https://db.ieee-esb.org");
+
+export default async function Home() {
+	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
+
+	const DBevents = await pb.collection("events").getList(1, 3, {
+		sort: "-when",
+	});
+
+	const events = DBevents.items.map((event) => {
+		let newevent: EventData = {
+			id: event["id"] as string,
+			title: event["title"] as string,
+			description: event["description"] as string,
+			when: new Date(event["when"] as string),
+			where: event["where"] as string,
+			who: event["who"] ? event["who"] as string[] : ["/kory.png"] as string[],
+			image: event["image"]
+				? baseFileURL + event["id"] + "/" + event["image"]
+				: ("" as string),
+			link: event["vlink"],
+		};
+		if (newevent.description.length > 150)
+			newevent.description = newevent.description.slice(0, 150) + "...";
+		return newevent;
+	});
+
 	return (
 		<div>
 			<div className={styles.container}>
@@ -84,9 +121,9 @@ export default function Home() {
 			<AngledRectangle flipped={true} color="white" textColor="blue">
 				<h1>Upcoming Events</h1>
 				<div className="container flex xl:justify-evenly max-xl:flex-col items-center gap-32">
-					<EventCard />
-					<EventCard />
-					<EventCard />
+					<EventCard event={events[0]} />
+					<EventCard event={events[1]} />
+					<EventCard event={events[2]} />
 				</div>
 				<div className={styles.eventButton}>
 					<Button text="See More" href="/events" />
@@ -162,25 +199,6 @@ export default function Home() {
 					textColor="blue"
 				/>
 			</AngledRectangle>
-			{/* <AngledRectangle flipped={true} color="white" textColor="blue"> */}
-			{/* <div className={styles.locationSection}>
-				<h1>Our Location</h1>
-				<p className={styles.locationSubtitle}>
-					EENGR BUILDING AT UNIVERSITY OF TEXAS RIO GRANDE VALLEY
-				</p>
-				<div className={styles.mapContainer}>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.1579292776966!2d-98.17407678034083!3d26.306036498563397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a249f543dcd1%3A0x3c15a7793a944b1d!2sUTRGV%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1768677751992!5m2!1sen!2sus&zoom=1"
-						width="100%"
-						height="100%"
-						style={{ border: 0 }}
-						allowFullScreen={false}
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-					/>
-				</div>
-			</div> */}
-			{/* </AngledRectangle> */}
 			<div className={styles.locationSection}>
 				<div className={styles.mapContainer}>
 					<iframe
