@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container flex flex-col md:flex-row items-center justify-center gap-12">
         <div className="footer-logo">
           <a href="https://ieee.org" target="_blank">
             <img src="/ieee_mb_white.png" />

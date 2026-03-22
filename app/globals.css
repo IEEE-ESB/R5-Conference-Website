@@ -31,7 +31,6 @@ body {
 	background-color: var(--blue);
 	color: var(--white);
 	padding: 60px 80px 24px;
-	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	z-index: 999;
 	position: relative;
 	width: 100%;
@@ -121,7 +120,6 @@ body {
 	background-color: #062b55;
 	color: #ffffff;
 	padding: 60px 80px 24px;
-	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .footer-container {
@@ -141,13 +139,13 @@ body {
 .footer-nav {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
-	column-gap: 80px;
-	row-gap: 16px;
+	column-gap: 2rem;
+	row-gap: 1rem;
 }
 
 .footer-nav a {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.8px;
 	text-transform: uppercase;
