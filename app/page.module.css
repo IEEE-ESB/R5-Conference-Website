@@ -1,4 +1,5 @@
 .container {
+	z-index: 3;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -23,7 +24,8 @@
 }
 
 .centered_link img {
-	width: 30rem;
+	width: auto;
+	max-width: 40rem;
 }
 
 .title {
@@ -38,7 +40,7 @@
 
 .button {
 	border-radius: 40px;
-	background-color: var(--yellow);
+	background-color: var(--orange);
 	color: var(--blue);
 	font-size: 30px;
 	font-weight: 800;
@@ -61,7 +63,6 @@
 
 .eventCard {
 	position: relative;
-	width: 25rem;
 	border-radius: 64px;
 	transition: transform 0.3s ease;
 }
@@ -85,7 +86,7 @@
 }
 
 .eventInfo {
-	background: var(--yellow);
+	background: var(--orange);
 	padding: 2rem 2rem 8rem;
 	color: var(--blue);
 	border-radius: 0 0 64px 64px;
@@ -245,15 +246,15 @@
 
 .locationOverlay h1 {
 	color: var(--blue);
-	font-size: 9vw;
+	/* font-size: 12rem; */
 	line-height: 0.8;
 	font-weight: 900;
 	/* margin: 0 0 1rem 0; */
 }
 
 .locationSubtitle {
-	font-size: 48px;
-	width: 40vw;
+	/* font-size: 5vw; */
+	/* width: 40vw; */
 	font-weight: 600;
 	text-transform: uppercase;
 	/* letter-spacing: 0.05em; */
@@ -264,7 +265,7 @@
 
 /* Content Images */
 .contentImg {
-	width: 50%;
+	/* width: 50%; */
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }

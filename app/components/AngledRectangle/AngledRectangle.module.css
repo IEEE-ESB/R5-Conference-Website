@@ -8,10 +8,11 @@
 	margin: -5rem 0;
 	padding: 5rem 0;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .angled_rectangle h1 {
-	font-size: 6vw;
+	font-size: 5rem;
 	font-weight: 900;
 	/* text-align: left; */
 	/* margin-bottom: 5rem; */
@@ -19,18 +20,20 @@
 	line-height: 1;
 	padding-bottom: 3rem;
 	text-align: left;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .angled_rectangle.right {
-	clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+	clip-path: polygon(0 0, 100% 4.9rem, 100% calc(100% - 4.9rem), 0 100%);
 }
 
 .angled_rectangle.left {
-	clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 95%);
+	clip-path: polygon(0 5.1rem, 100% 0%, 100% 100%, 0 calc(100% - 4.9rem));
 }
 
 .angled_rectangle.yellow {
-	background: var(--yellow);
+	background: var(--orange);
 }
 
 .angled_rectangle.white {
@@ -42,7 +45,7 @@
 }
 
 .angled_rectangle.text_yellow {
-	color: var(--yellow);
+	color: var(--orange);
 }
 
 .angled_rectangle.text_white {

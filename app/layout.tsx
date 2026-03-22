@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Header from "./components/Header/Header";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -12,34 +13,15 @@ export const metadata: Metadata = {
 	description: "IEEE Edinburg Student Branch",
 };
 
-function Header() {
-	return (
-		<div className="navbar">
-			<a href="/" className="navbar-left">
-				<img src="/ieee_mb_white.png" className="navbar-logo" />
-				<h1 className="navbar-title">Edinburg Student Branch</h1>
-			</a>
-			<nav className="navbar-menu">
-				<a href="/about">About Us</a>
-				<a href="/events">Events</a>
-				<a href="/membership">Membership</a>
-				<a href="/leadership">Leadership</a>
-				<a href="/collaborate">Collaborate</a>
-				<a href="/contact">Contact Us</a>
-			</nav>
-		</div>
-	);
-}
-
 function Footer() {
-	return (
-		<footer className="footer">
-			<div className="footer-container">
-				<div className="footer-logo">
-					<a href="https://ieee.org" target="_blank">
-						<img src="/ieee_mb_white.png" />
-					</a>
-				</div>
+  return (
+    <footer className="footer">
+      <div className="container flex flex-col md:flex-row items-center justify-center gap-12">
+        <div className="footer-logo">
+          <a href="https://ieee.org" target="_blank">
+            <img src="/ieee_mb_white.png" />
+          </a>
+        </div>
 
 				<div className="footer-nav">
 					<a href="/about">About Us</a>
