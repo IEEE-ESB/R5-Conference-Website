@@ -15,7 +15,7 @@ export default function ImageStack({
 }) {
 	return (
 		<div
-			className={styles.container}
+			className={`${styles.container} max-lg:hidden`}
 			style={
 				{
 					"--top-position": `${position[0]}rem`,
