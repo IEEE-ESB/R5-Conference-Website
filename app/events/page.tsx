@@ -1,3 +1,4 @@
+import { M_PLUS_1 } from "next/font/google";
 import AngledRectangle from "../components/AngledRectangle/AngledRectangle";
 import Button from "../components/Button/Button";
 import ImageStack from "../components/ImageStack/ImageStack";
@@ -17,11 +18,27 @@ type EventData = {
 	link: string;
 };
 
-function EventCard({ event }: { event?: EventData }) {
+async function EventCard({ event }: { event?: EventData }) {
+	let pic = await pb
+		.collection("leads")
+		.getList(1, 1, {
+			filter: `userId = "${event?.who?.[0] || "-1"}"`,
+			requestKey: null,
+		})
+		.then((user) => {
+			return user?.items?.[0]?.avatar
+				? `https://db.ieee-esb.org/api/files/leads/${user.items[0].id}/${user.items[0].avatar}`
+				: "/missing.webp";
+		});
+
 	return (
-		<a className={styles.eventContainer} href={event?.link} target="_blank">
+		<a
+			className={`${styles.eventContainer} lg:w-1/3`}
+			href={event?.link}
+			target="_blank"
+		>
 			<div className={styles.eventHead}>
-				<img src="/kory.png" className={styles.eventLead} />
+				<img src={pic || "/missing.webp"} className={styles.eventLead} />
 				<img
 					src={event?.image || "/under_construction.png"}
 					className={styles.eventPic}
@@ -65,7 +82,6 @@ export default async function Events() {
 	});
 
 	const mainEvent = events[0];
-	console.log(mainEvent.image);
 
 	return (
 		<div>
@@ -73,41 +89,65 @@ export default async function Events() {
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue">
-				<a
-					className={styles.mainEventContainer}
-					href={mainEvent.link}
-					target="_blank"
-				>
-					<div className={styles.mainEventBody}>
-						<h3>{mainEvent.title}</h3>
-						<p>{mainEvent.description}</p>
-						<ul>
-							<li>WHEN: {mainEvent.when.getDate()}</li>
-							<li>LOCATION: {mainEvent.where}</li>
-						</ul>
+				<div className="max-lg:flex-col lg:flex justify-center items-center">
+					<a
+						href={mainEvent.link}
+						target="_blank"
+						className={`${styles.mainEventContainer} w-full max-lg:hidden`}
+					>
+						<div className={`${styles.mainEventBody} lg:flex max-lg:hidden`}>
+							<h3>{mainEvent.title}</h3>
+							<p>{mainEvent.description}</p>
+							<ul>
+								<li>WHEN: {mainEvent.when.getDate()}</li>
+								<li>LOCATION: {mainEvent.where}</li>
+							</ul>
+						</div>
+						<div className={`${styles.mainEventHead} max-lg:hidden`}>
+							<img
+								src={await pb
+									.collection("leads")
+									.getList(1, 1, {
+										filter: `userId = "${mainEvent.who?.[0] || "-1"}"`,
+										requestKey: null,
+									})
+									.then((user) => {
+										return user?.items?.[0]?.avatar
+											? `https://db.ieee-esb.org/api/files/leads/${user.items[0].id}/${user.items[0].avatar}`
+											: "/missing.webp";
+									})}
+								className={styles.mainEventLead}
+							/>
+							<img
+								src={mainEvent.image || "/under_construction.png"}
+								className={styles.mainEventPic}
+							/>
+						</div>
+					</a>
+					<div className={"lg:hidden"}>
+						<EventCard event={events[0]} />
 					</div>
-					<div className={styles.mainEventHead}>
-						<img src="/kory.png" className={styles.mainEventLead} />
-						<img
-							src={mainEvent.image || "/under_construction.png"}
-							className={styles.mainEventPic}
-						/>
-					</div>
-				</a>
-				<div className={styles.subEvents}>
+				</div>
+				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
 					<EventCard event={events[1]} />
 					<EventCard event={events[2]} />
 				</div>
-				<div className={styles.subEvents}>
+				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
 					<EventCard event={events[3]} />
 					<EventCard event={events[4]} />
 				</div>
 			</AngledRectangle>
 			<div className={styles.compLine} />
 			<div className={styles.compContainer}>
-				<h2>UPCOMING COMPETITIONS</h2>
-				<h2>UPCOMING COMPETITIONS</h2>
-				<h2>UPCOMING COMPETITIONS</h2>
+				<h2 className="max-md:hidden text-8xl text-center">
+					UPCOMING COMPETITIONS
+				</h2>
+				<h2 className="max-md:text-4xl text-8xl text-center">
+					UPCOMING COMPETITIONS
+				</h2>
+				<h2 className="max-md:hidden text-8xl text-center">
+					UPCOMING COMPETITIONS
+				</h2>
 			</div>
 			<ImageStack
 				image1="hero.jpg"
