@@ -33,7 +33,7 @@ async function EventCard({ event }: { event?: EventData }) {
 
 	return (
 		<a
-			className={`${styles.eventContainer} lg:w-1/3`}
+			className={`${styles.eventContainer} lg:w-1/3 max-lg:w-full`}
 			href={event?.link}
 			target="_blank"
 		>
@@ -89,7 +89,7 @@ export default async function Events() {
 				<h1>WORKSHOPS & COMPETITIONS</h1>
 			</AngledRectangle>
 			<AngledRectangle color="white" textColor="blue">
-				<div className="max-lg:flex-col lg:flex justify-center items-center">
+				<div className="lg:flex justify-center items-center">
 					<a
 						href={mainEvent.link}
 						target="_blank"
@@ -124,9 +124,9 @@ export default async function Events() {
 							/>
 						</div>
 					</a>
-					<div className={"lg:hidden"}>
-						<EventCard event={events[0]} />
-					</div>
+				</div>
+				<div className="container flex flex-col lg:hidden">
+					<EventCard event={mainEvent} />
 				</div>
 				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
 					<EventCard event={events[1]} />
