@@ -153,13 +153,25 @@ export default async function Events() {
 				image1="hero.jpg"
 				image2="hero.jpg"
 				image3="hero.jpg"
-				position={[3, 15]}
+				position={[8, 15]}
 				flipped={true}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
-				<div className={styles.r5container}>
-					<div className={styles.r5body}>
-						<img className={styles.r5logo} src="region-5.webp" />
+				<div
+					className={
+						styles.r5container + " lg:h-200 md:h-300 sm:h-300 h-350 mt-15"
+					}
+				>
+					<div
+						className={
+							styles.r5body +
+							" lg:w-1/2 max-lg:w-full max-lg:align-content-center"
+						}
+					>
+						<img
+							className={styles.r5logo + " top-24 right-12 md:h-30 max-md:h-22"}
+							src="region-5.webp"
+						/>
 						<ul className={styles.r5date}>
 							<li>Date: April 4-6, 2025</li>
 							<li>Location: Witchita, Kansas</li>
@@ -172,9 +184,13 @@ export default async function Events() {
 							design challenges. They also develop professional skills while
 							connecting with peers and industry professionals.
 						</p>
-						<div className={styles.r5comps}>
+						<div
+							className={
+								styles.r5comps + " max-lg:flex-col justify-center items-center"
+							}
+						>
 							<img src="/hero.jpg" />
-							<div>
+							<div className="flex flex-col items-center">
 								<h3>Competitions:</h3>
 								<ul>
 									<li>Robotics</li>
