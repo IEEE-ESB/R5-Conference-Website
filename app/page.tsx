@@ -1,29 +1,54 @@
 import AngledRectangle from "@/app/components/AngledRectangle/AngledRectangle";
 import Button from "./components/Button/Button";
 import styles from "./page.module.css";
+import PocketBase from "pocketbase";
 
-function EventCard() {
+const pb = new PocketBase("https://db.ieee-esb.org");
+
+type EventData = {
+	id: string;
+	title: string;
+	description: string;
+	when: Date;
+	where: string;
+	who: string[];
+	image: string;
+	link: string;
+};
+
+async function EventCard({ event }: { event?: EventData }) {
+	let pic = await pb
+		.collection("leads")
+		.getList(1, 1, {
+			filter: `userId = "${event?.who?.[0] || "-1"}"`,
+			requestKey: null,
+		})
+		.then((user) => {
+			return user?.items?.[0]?.avatar
+				? `https://db.ieee-esb.org/api/files/leads/${user.items[0].id}/${user.items[0].avatar}`
+				: "/missing.webp";
+		});
+
 	return (
-		<a href="#" target="_blank" className={`${styles.eventCard}`}>
+		<a href={event?.link} target="_blank" className={`${styles.eventCard}`}>
 			<div className={styles.eventImage}>
-				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src={event?.image || "/under_construction.png"} alt="" />
 			</div>
 
 			<div className={styles.eventInfo}>
-				<h2 className={styles.eventTitle}>Event Title</h2>
+				<h2 className={styles.eventTitle}>{event?.title || "Coming Soon"}</h2>
 				<p className={styles.eventDescription}>
-					Nulla labore ea eiusmod ea excepteur minim cillum sunt consequat elit
-					sint do duis amet.
+					{event?.description || "Details will be announced soon. Stay tuned!"}
 				</p>
 
 				<div className={styles.eventDetails}>
-					<p>TIME: 5pm 04/01/2067</p>
-					<p>LOCATION: UTRGV</p>
+					<p>TIME: {event?.when?.toLocaleTimeString() || "TBD"}</p>
+					<p>LOCATION: {event?.where || "TBD"}</p>
 				</div>
 			</div>
 
 			<div className={styles.eventHost}>
-				<img src="/hero.jpg" alt="" style={{ objectFit: "cover" }} />
+				<img src={pic} alt="" />
 			</div>
 		</a>
 	);
@@ -55,7 +80,31 @@ function LeadershipCard({
 	);
 }
 
-export default function Home() {
+export default async function Home() {
+	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
+
+	const DBevents = await pb.collection("events").getList(1, 3, {
+		sort: "-when",
+	});
+
+	const events = DBevents.items.map((event) => {
+		let newevent: EventData = {
+			id: event["id"] as string,
+			title: event["title"] as string,
+			description: event["description"] as string,
+			when: new Date(event["when"] as string),
+			where: event["where"] as string,
+			who: event["who"] as string[],
+			image: event["image"]
+				? baseFileURL + event["id"] + "/" + event["image"]
+				: ("" as string),
+			link: event["vlink"],
+		};
+		if (newevent.description.length > 150)
+			newevent.description = newevent.description.slice(0, 150) + "...";
+		return newevent;
+	});
+
 	return (
 		<div>
 			<div className={styles.container}>
@@ -84,9 +133,9 @@ export default function Home() {
 			<AngledRectangle flipped={true} color="white" textColor="blue">
 				<h1>Upcoming Events</h1>
 				<div className="container flex xl:justify-evenly max-xl:flex-col items-center gap-32">
-					<EventCard />
-					<EventCard />
-					<EventCard />
+					<EventCard event={events[0]} />
+					<EventCard event={events[1]} />
+					<EventCard event={events[2]} />
 				</div>
 				<div className={styles.eventButton}>
 					<Button text="See More" href="/events" />
