@@ -84,16 +84,16 @@
 	transform-origin: 1px;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1300px) {
 	.navbar-title .long-title {
 		display: none;
 	}
 	.navbar-title .short-title {
 		display: inline;
 	}
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
 	.navbar-menu {
 		display: none;
 		flex-direction: column;
@@ -118,7 +118,7 @@
 		display: flex;
 	}
 
-	.navbar-title {
+	/* .navbar-title {
 		font-size: 20px;
-	}
+	} */
 }

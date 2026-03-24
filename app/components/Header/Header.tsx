@@ -7,7 +7,7 @@ export default function Header() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth >= 768) {
+			if (window.innerWidth >= 1300) {
 				setIsMenuOpen(false);
 			}
 		};
@@ -21,12 +21,12 @@ export default function Header() {
 			<a href="/" className="navbar-left">
 				<img src="/ieee_mb_white.png" className="navbar-logo" alt="IEEE Logo" />
 				<h1 className="navbar-title">
-					<span className="hidden md:inline">Edinburg Student Branch</span>
-					<span className="inline md:hidden">ESB</span>
+					<span className="hidden sm:inline">Edinburg Student Branch</span>
+					<span className="inline sm:hidden">ESB</span>
 				</h1>
 			</a>
 			<button
-				className="hamburger-menu lg:hidden"
+				className="hamburger-menu xl:hidden"
 				onClick={() => setIsMenuOpen(!isMenuOpen)}
 				aria-label="Toggle menu"
 				aria-expanded={isMenuOpen}
@@ -35,7 +35,9 @@ export default function Header() {
 				<div />
 				<div />
 			</button>
-			<nav className={`navbar-menu ${isMenuOpen ? "active" : "hidden"} md:flex`}>
+			<nav
+				className={`navbar-menu ${isMenuOpen ? "active" : "hidden"} md:flex`}
+			>
 				<a href="/about">About Us</a>
 				<a href="/events">Events</a>
 				<a href="/membership">Membership</a>

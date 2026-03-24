@@ -10,14 +10,19 @@ export default function Collaborate() {
 					alt="Picture of a Lecture Hall with students"
 					className={styles.container_img}
 				/>
-				<h1 className={styles.container_header}>
-					WANT TO <br /> COLLABORATE?
-				</h1>
 			</div>
+			<h1
+				className={
+					styles.container_header +
+					" 3xl:top-180 2xl:top-160 xl:top-130 lg:top-110 md:top-90 sm:top-60 top-25 lg:text-8xl text-7xl"
+				}
+			>
+				WANT TO <br /> COLLABORATE?
+			</h1>
 			<AngledRectangle>
 				<p className={styles.text}>
 					While the University of Texas Rio Grande Valley provides laboratory
-					space and facilities for our projects, the majority of IEEE ESB’s
+					space and facilities for our projects, the majority of IEEE ESB's
 					funding is generated through our own fundraising efforts. To continue
 					supporting our mission of fostering innovation and professional
 					development, we welcome contributions in the form of monetary
@@ -31,7 +36,7 @@ export default function Collaborate() {
 				<h1 className={styles.header}>COLLABORATE OPTIONS</h1>
 				<div className={styles.list}>
 					<div className={styles.row}>
-						<div className={styles.bullet}>1</div>
+						<div className={styles.bullet + " max-md:hidden md:flex"}>1</div>
 						<div className={styles.textContainer}>
 							<h3 className={styles.rowHeader}>
 								Exclusive Discounts or Revenue Sharing
@@ -44,7 +49,7 @@ export default function Collaborate() {
 						</div>
 					</div>
 					<div className={styles.row}>
-						<div className={styles.bullet}>2</div>
+						<div className={styles.bullet + " max-md:hidden md:flex"}>2</div>
 						<div className={styles.textContainer}>
 							<h3 className={styles.rowHeader}>Product Donations</h3>
 							<p className={styles.rowText}>
@@ -55,7 +60,7 @@ export default function Collaborate() {
 						</div>
 					</div>
 					<div className={styles.row}>
-						<div className={styles.bullet}>3</div>
+						<div className={styles.bullet + " max-md:hidden md:flex"}>3</div>
 						<div className={styles.textContainer}>
 							<h3 className={styles.rowHeader}>Collaborative Projects</h3>
 							<p className={styles.rowText}>
@@ -66,7 +71,7 @@ export default function Collaborate() {
 						</div>
 					</div>
 					<div className={styles.row}>
-						<div className={styles.bullet}>4</div>
+						<div className={styles.bullet + " max-md:hidden md:flex"}>4</div>
 						<div className={styles.textContainer}>
 							<h3 className={styles.rowHeader}>Monetary Contributions</h3>
 							<p className={styles.rowText}>

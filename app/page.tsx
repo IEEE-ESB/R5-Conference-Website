@@ -3,6 +3,8 @@ import Button from "./components/Button/Button";
 import styles from "./page.module.css";
 import PocketBase from "pocketbase";
 
+const pb = new PocketBase("https://db.ieee-esb.org");
+
 type EventData = {
 	id: string;
 	title: string;
@@ -14,27 +16,39 @@ type EventData = {
 	link: string;
 };
 
-function EventCard({ event }: { event?: EventData }) {
+async function EventCard({ event }: { event?: EventData }) {
+	let pic = await pb
+		.collection("leads")
+		.getList(1, 1, {
+			filter: `userId = "${event?.who?.[0] || "-1"}"`,
+			requestKey: null,
+		})
+		.then((user) => {
+			return user?.items?.[0]?.avatar
+				? `https://db.ieee-esb.org/api/files/leads/${user.items[0].id}/${user.items[0].avatar}`
+				: "/missing.webp";
+		});
+
 	return (
-		<a href="#" target="_blank" className={`${styles.eventCard}`}>
+		<a href={event?.link} target="_blank" className={`${styles.eventCard}`}>
 			<div className={styles.eventImage}>
-				<img src={event?.image ?? "/hero.jpg"} alt="" style={{ objectFit: "cover" }} />
+				<img src={event?.image || "/under_construction.png"} alt="" />
 			</div>
 
 			<div className={styles.eventInfo}>
-				<h2 className={styles.eventTitle}>{event?.title ?? "Event Title"}</h2>
+				<h2 className={styles.eventTitle}>{event?.title || "Coming Soon"}</h2>
 				<p className={styles.eventDescription}>
-					{event?.description ?? "Coming soon..."}
+					{event?.description || "Details will be announced soon. Stay tuned!"}
 				</p>
 
 				<div className={styles.eventDetails}>
-					<p>TIME: {event?.when.toLocaleTimeString() ?? "TBD"}</p>
-					<p>LOCATION: {event?.where ?? "TBD"}</p>
+					<p>TIME: {event?.when?.toLocaleTimeString() || "TBD"}</p>
+					<p>LOCATION: {event?.where || "TBD"}</p>
 				</div>
 			</div>
 
 			<div className={styles.eventHost}>
-				<img src={event?.who[0] ?? "/hero.jpg"} alt="" style={{ objectFit: "cover" }} />
+				<img src={pic} alt="" />
 			</div>
 		</a>
 	);
@@ -66,8 +80,6 @@ function LeadershipCard({
 	);
 }
 
-const pb = new PocketBase("https://db.ieee-esb.org");
-
 export default async function Home() {
 	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
 
@@ -82,7 +94,7 @@ export default async function Home() {
 			description: event["description"] as string,
 			when: new Date(event["when"] as string),
 			where: event["where"] as string,
-			who: event["who"] ? event["who"] as string[] : ["/kory.png"] as string[],
+			who: event["who"] as string[],
 			image: event["image"]
 				? baseFileURL + event["id"] + "/" + event["image"]
 				: ("" as string),
