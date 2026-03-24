@@ -21,10 +21,11 @@
 	color: var(--orange);
 	position: absolute;
 	z-index: 2;
-	bottom: 1rem;
+	/* top: 10rem; */
 	left: 10px;
-	font-size: 5.5rem;
+	/* font-size: 5.5rem; */
 	font-weight: 900;
+	overflow-wrap: anywhere;
 }
 
 .text {
@@ -59,7 +60,7 @@
 	height: 8rem;
 	border-radius: 50%;
 	background-color: var(--orange);
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	font-size: 3rem;
