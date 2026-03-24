@@ -219,9 +219,16 @@ export default async function Events() {
 				position={[7, 50]}
 			/>
 			<AngledRectangle color="yellow" textColor="blue">
-				<div className={styles.xtremeContainer}>
-					<div className={styles.xtremeBody}>
-						<img className={styles.xtremeLogo} src="xtreme_logo.png" />
+				<div
+					className={
+						styles.xtremeContainer + " max-lg:items-center max-sm:mb-30"
+					}
+				>
+					<div className={styles.xtremeBody + " max-lg:w-full lg:w-1/2"}>
+						<img
+							className={styles.xtremeLogo + " md:h-45 max-md:h-35"}
+							src="xtreme_logo.png"
+						/>
 						<ul className={styles.xtremeDate}>
 							<li>Date: October 25, 2025 (October 24, 2025)</li>
 							<li>Time: 00:00 UTC (7:00 PM CDT)</li>
