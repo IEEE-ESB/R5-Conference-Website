@@ -6,7 +6,7 @@ export default function About() {
 		<div>
 			<div className={styles.container}>
 				<img
-					src="/membership-hero.jpeg"
+					src="/members.jpg"
 					className={styles.container_img2 + " xl:h-150 md:h-100 h-50"}
 				></img>
 			</div>
@@ -21,9 +21,9 @@ export default function About() {
 				</p>
 			</AngledRectangle>
 			<div className={styles.container + " h-150"}>
-				<img src="/help.jpeg" className={styles.container_img + " h-full"} />
+				<img src="/question.jpg" className={styles.container_img + " h-full"} />
 				<div className={styles.darken}>
-					<p className="absolute text-lg top-30 px-5 lg:w-1/2 md:w-2/3">
+					<p className="absolute text-xl top-30 px-5 lg:w-1/2 md:w-2/3">
 						Need help with coursework or your senior design project? We've got
 						your back. And when it's your turn to give back, you can join us in
 						building partnerships and running fundraisers that make a difference

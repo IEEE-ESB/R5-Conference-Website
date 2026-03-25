@@ -29,18 +29,22 @@ export default function About() {
 					<h2>Executive Commitee</h2>
 				</div>
 				<div className="flex lg:gap-50 max-lg:flex-col">
-					<Profile imgUrl="/diego.png" position="President" name="Diego S." />
+					<Profile imgUrl="/diego.jpeg" position="President" name="Diego S." />
 					<Profile
-						imgUrl="/kory.png"
+						imgUrl="/kory.jpeg"
 						position="Vice President"
 						name="Kory L."
 					/>
-					<Profile imgUrl="/kory.png" position="Treasurer" name="Trinity R." />
+					<Profile imgUrl="/trin.jpeg" position="Treasurer" name="Trinity R." />
 				</div>
 				<div className="flex lg:gap-50 max-lg:flex-col">
-					<Profile imgUrl="/kory.png" position="Secretary" name="Joseph T." />
 					<Profile
-						imgUrl="/kory.png"
+						imgUrl="/joseph.jpeg"
+						position="Secretary"
+						name="Joseph T."
+					/>
+					<Profile
+						imgUrl="/jose.jpeg"
 						position="Master At Arms"
 						name="Jose A."
 					/>
@@ -53,33 +57,37 @@ export default function About() {
 				</div>
 				<div className="flex lg:gap-50 max-lg:flex-col">
 					<Profile
-						imgUrl="/kory.png"
+						imgUrl="/danny.jpeg"
 						position="Program Director"
 						name="Danny D."
 					/>
 					<Profile
-						imgUrl="/joseph.png"
+						imgUrl="/joey.jpeg"
 						position="Social Media Manager"
 						name="Joey R."
 					/>
 					<Profile
-						imgUrl="/kory.png"
+						imgUrl="/sebastian.jpeg"
 						position="Fundraising"
 						name="Sebastain G."
 					/>
 				</div>
 				<div className="flex lg:gap-50 max-lg:flex-col">
 					<Profile
-						imgUrl="/joseph.png"
+						imgUrl="/gyselle.jpeg"
 						position="Creative Director"
 						name="Gyselle G."
 					/>
 					<Profile
-						imgUrl="/kory.png"
+						imgUrl="/lauro.jpeg"
 						position="Project Director"
 						name="Lauro C."
 					/>
-					<Profile imgUrl="/joseph.png" position="Webmaster" name="Bukola A." />
+					<Profile
+						imgUrl="/missing.webp"
+						position="Webmaster"
+						name="Bukola A."
+					/>
 				</div>
 			</AngledRectangle>
 
@@ -89,12 +97,12 @@ export default function About() {
 				</div>
 				<div className="flex lg:gap-50 max-lg:flex-col">
 					<Profile
-						imgUrl="/diego.png"
+						imgUrl="/CarlosRodriguezBetancourth.jpg"
 						position="Advisor"
 						name="Carlos Rodriguez Betancourth"
 					/>
 					<Profile
-						imgUrl="/diego.png"
+						imgUrl="/LuisCastanuela.jpg"
 						position="Advisor"
 						name="Luis Castanuela"
 					/>

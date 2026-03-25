@@ -191,17 +191,17 @@ export default async function Home() {
 					<LeadershipCard
 						name="Diego Sauceda"
 						role="President"
-						imageUrl="/diego.png"
+						imageUrl="/diego.jpeg"
 					/>
 					<LeadershipCard
 						name="Koriel Lopez"
 						role="Vice President"
-						imageUrl="/kory.png"
+						imageUrl="/kory.jpeg"
 					/>
 					<LeadershipCard
 						name="Joseph Trevino"
 						role="Secretary"
-						imageUrl="/joseph.png"
+						imageUrl="/joseph.jpeg"
 					/>
 				</div>
 				<Button

@@ -150,9 +150,9 @@ export default async function Events() {
 				</h2>
 			</div>
 			<ImageStack
-				image1="hero.jpg"
-				image2="hero.jpg"
-				image3="hero.jpg"
+				image1="r5_travel.jpeg"
+				image2="r5_group.jpeg"
+				image3="r5_award.jpeg"
 				position={[8, 15]}
 				flipped={true}
 			/>
@@ -189,7 +189,7 @@ export default async function Events() {
 								styles.r5comps + " max-lg:flex-col justify-center items-center"
 							}
 						>
-							<img src="/hero.jpg" />
+							<img src="/r5_winners.jpeg" />
 							<div className="flex flex-col items-center">
 								<h3>Competitions:</h3>
 								<ul>
@@ -213,9 +213,9 @@ export default async function Events() {
 				</div>
 			</AngledRectangle>
 			<ImageStack
-				image1="hero.jpg"
-				image2="hero.jpg"
-				image3="hero.jpg"
+				image1="xt_group.jpeg"
+				image2="xt_live.jpg"
+				image3="xt_leads.jpg"
 				position={[7, 50]}
 			/>
 			<AngledRectangle color="yellow" textColor="blue">
