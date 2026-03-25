@@ -26,9 +26,9 @@ export default function About() {
 				</div>
 			</AngledRectangle>
 			<ImageStack
-				image1="/kids_class_presentation.jpg"
-				image2="/kids_class_presentation.jpg"
-				image3="/kids_class_presentation.jpg"
+				image1="/conf-utrgv.jpg"
+				image2="/general-meeting.jpg"
+				image3="/soldering.jpg"
 				position={[-45, 50]}
 			/>
 			<AngledRectangle color="white" textColor="blue" flipped={true}>
@@ -40,10 +40,12 @@ export default function About() {
 					changemakers.
 				</p>
 			</AngledRectangle>
-			<img src="/hero.jpg" className={styles.video} />
+			<img src="/workshop.jpg" className={styles.video} />
 			{/* This will be the video */}
 			<AngledRectangle color="blue" textColor="white" flipped={true}>
-				<div className={`${styles.valuesContainer} container flex lg:justify-evenly max-lg:flex-col items-center gap-16`}>
+				<div
+					className={`${styles.valuesContainer} container flex lg:justify-evenly max-lg:flex-col items-center gap-16`}
+				>
 					<div>
 						<h2>Our</h2>
 						<h2>Values</h2>
@@ -84,7 +86,7 @@ export default function About() {
 					</ul>
 				</div>
 			</AngledRectangle>
-			<img src="/hero.jpg" className={styles.collage} />
+			<img src="/fundraiser.jpg" className={styles.collage} />
 		</div>
 	);
 }
