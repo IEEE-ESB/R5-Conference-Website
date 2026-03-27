@@ -3,6 +3,8 @@ import Button from "./components/Button/Button";
 import styles from "./page.module.css";
 import PocketBase from "pocketbase";
 
+export const dynamic = "force-dynamic";
+
 const pb = new PocketBase("https://db.ieee-esb.org");
 
 type EventData = {
