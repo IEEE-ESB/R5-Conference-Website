@@ -1,4 +1,3 @@
-import { M_PLUS_1 } from "next/font/google";
 import AngledRectangle from "../components/AngledRectangle/AngledRectangle";
 import Button from "../components/Button/Button";
 import ImageStack from "../components/ImageStack/ImageStack";
@@ -45,11 +44,22 @@ async function EventCard({ event }: { event?: EventData }) {
 				/>
 			</div>
 			<div className={styles.eventBody}>
-				<h3>{event?.title ?? "TBD"}</h3>
-				<p>{event?.description ?? ""}</p>
+				<h3>{event?.title ? event.title : "Being Built"}</h3>
+				<p>
+					{event?.description
+						? event.description
+						: "Coming soon to an event near you!"}
+				</p>
 				<ul>
-					<li>WHEN: {event?.when.toLocaleDateString() ?? "TBD"}</li>
-					<li>LOCATION: {event?.where ?? "TBD"}</li>
+					<li>
+						WHEN:{" "}
+						{event && event.when.getTime()
+							? event.when.toLocaleDateString() +
+								" " +
+								event.when.toLocaleTimeString()
+							: "TBD"}
+					</li>
+					<li>LOCATION: {event?.where ? event.where : "TBD"}</li>
 				</ul>
 			</div>
 		</a>
@@ -99,7 +109,14 @@ export default async function Events() {
 							<h3>{mainEvent.title}</h3>
 							<p>{mainEvent.description}</p>
 							<ul>
-								<li>WHEN: {mainEvent.when.getDate()}</li>
+								<li>
+									WHEN:{" "}
+									{mainEvent && mainEvent.when.getTime()
+										? mainEvent.when.toLocaleDateString() +
+											" " +
+											mainEvent.when.toLocaleTimeString()
+										: "TBD"}
+								</li>
 								<li>LOCATION: {mainEvent.where}</li>
 							</ul>
 						</div>

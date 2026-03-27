@@ -34,7 +34,6 @@ async function EventCard({ event }: { event?: EventData }) {
 			<div className={styles.eventImage}>
 				<img src={event?.image || "/under_construction.png"} alt="" />
 			</div>
-
 			<div className={styles.eventInfo}>
 				<h2 className={styles.eventTitle}>{event?.title || "Coming Soon"}</h2>
 				<p className={styles.eventDescription}>
@@ -42,7 +41,10 @@ async function EventCard({ event }: { event?: EventData }) {
 				</p>
 
 				<div className={styles.eventDetails}>
-					<p>TIME: {event?.when?.toLocaleTimeString() || "TBD"}</p>
+					<p>
+						TIME: {event?.when?.toLocaleDateString() || ""}{" "}
+						{event?.when?.toLocaleTimeString() || "TBD"}
+					</p>
 					<p>LOCATION: {event?.where || "TBD"}</p>
 				</div>
 			</div>

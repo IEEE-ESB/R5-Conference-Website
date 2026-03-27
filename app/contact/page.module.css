@@ -9,7 +9,7 @@
 
 .container_img {
 	width: 100vw;
-	height: 87.5vh; /* Let aspect-ratio handle the height */
+	height: 50vh; /* Let aspect-ratio handle the height */
 	object-fit: cover;
 }
 
@@ -24,8 +24,8 @@
 	background-color: var(--blue);
 	border-radius: 10%;
 	position: absolute;
-	top: auto;
-	left: auto;
+	top: 10vh;
+	/* left: auto; */
 	padding: 5vh 0;
 }
 
