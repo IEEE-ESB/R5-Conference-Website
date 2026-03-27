@@ -1,0 +1,272 @@
+/* Main Event */
+
+.mainEventContainer {
+	display: flex;
+	position: relative;
+	width: 60%;
+	height: 20rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	margin-bottom: 5rem;
+	transition: transform 0.3s ease;
+}
+
+.mainEventContainer:hover {
+	transform: translateY(-5%);
+	cursor: pointer;
+}
+
+.mainEventHead {
+	object-fit: cover;
+	height: 100%;
+	width: 40%;
+	background-color: var(--blue);
+}
+
+.mainEventPic {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.mainEventLead {
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3rem;
+	border: 0.2rem var(--white) solid;
+	right: 1rem;
+	top: 1rem;
+	background-color: var(--orange);
+}
+
+.mainEventBody {
+	/* display: flex; */
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 18px;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+}
+
+.mainEventBody h3 {
+	color: var(--orange);
+	font-size: 32px;
+	font-weight: 900;
+}
+
+/* Sub-Event Cards */
+/* .subEvents {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 10rem;
+} */
+
+.eventContainer {
+	position: relative;
+	/* width: 25%; */
+	height: 40rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	margin-bottom: 5rem;
+	transition: transform 0.3s ease;
+}
+
+.eventContainer:hover {
+	transform: translateY(-5%);
+	cursor: pointer;
+}
+
+.eventHead {
+	object-fit: cover;
+	height: 40%;
+	width: 100%;
+	background-color: var(--blue);
+}
+
+.eventPic {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.eventLead {
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3rem;
+	border: 0.2rem var(--white) solid;
+	right: 1rem;
+	top: 1rem;
+	background-color: var(--orange);
+}
+
+.lead {
+	position: absolute;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	border: 0.2rem var(--white) solid;
+	right: 1rem;
+	top: 1rem;
+}
+
+.eventBody h3 {
+	color: var(--orange);
+	font-size: 32px;
+	font-weight: 900;
+}
+
+.eventBody {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 18px;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+}
+
+/* Competitions Banner */
+
+.compLine {
+	background-color: var(--orange);
+	height: 4rem;
+	width: 99.9%;
+	transform: translateX(-5rem);
+	transform: rotate(-2.5deg);
+	margin: 2rem 0 -5rem 0;
+	clip-path: polygon(0 0, calc(100% + 1rem) 0, 100% 100%, 0rem 100%);
+}
+
+.compContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--blue);
+	height: fit-content;
+	padding: 6rem 0 4rem 0;
+	overflow-wrap: anywhere;
+}
+
+.compContainer h2 {
+	transform: rotate(-2.5deg);
+	color: var(--blue);
+	/* font-size: 80px; */
+	line-height: 1;
+	font-weight: 900;
+	/* text-shadow:
+		-5px -5px 0 var(--orange),
+		5px -5px 0 var(--orange),
+		-5px 5px 0 var(--orange),
+		5px 5px 0 var(--orange); */
+	-webkit-text-stroke: 3px var(--orange);
+}
+
+/* Region 5 */
+
+.r5container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+	/* height: 90rem; */
+}
+
+.r5logo {
+	position: absolute;
+	/* right: 3rem; */
+	/* top: 6rem; */
+	width: auto;
+	/* height: 8rem; */
+}
+
+.r5body {
+	/* width: 50%; */
+	height: fit-content;
+}
+
+.r5comps {
+	position: absolute;
+	display: flex;
+	gap: 5rem;
+	color: var(--orange);
+	margin: 2rem 0 2rem 0;
+	font-size: 28px;
+	font-weight: 700;
+	right: 7%;
+	/* align-content: center; */
+}
+
+.r5comps h3 {
+	font-size: 32px;
+}
+
+.r5comps img {
+	display: block;
+	object-fit: cover;
+	border: 10px white solid;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+	border-radius: 3px;
+	width: 35rem;
+	height: 20rem;
+}
+
+.r5button {
+	display: flex;
+	align-items: center;
+	margin-top: 0rem;
+}
+
+.r5body p {
+	font-size: 24px;
+}
+
+.r5date {
+	font-size: 28px;
+	font-weight: 900;
+	color: var(--orange);
+	margin: -4rem 0 3rem 0;
+}
+
+/* Xtreme */
+
+.xtremeContainer {
+	display: flex;
+	flex-direction: column;
+	/* align-items: flex-start; */
+	width: 100%;
+	height: 40rem;
+}
+
+.xtremeLogo {
+	position: absolute;
+	left: 3rem;
+	top: 3rem;
+	width: auto;
+	/* height: 10rem; */
+}
+
+.xtremeBody {
+	/* width: 50%; */
+	height: fit-content;
+	margin-bottom: 3rem;
+}
+
+.xtremeBody p {
+	font-size: 24px;
+}
+
+.xtremeDate {
+	font-size: 28px;
+	font-weight: 900;
+	color: var(--blue);
+	margin: 0rem 0 5rem 0;
+}
