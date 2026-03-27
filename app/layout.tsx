@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 };
 
 function Footer() {
-  return (
-    <footer className="footer">
-      <div className="container flex flex-col md:flex-row items-center justify-center gap-12">
-        <div className="footer-logo">
-          <a href="https://ieee.org" target="_blank">
-            <img src="/ieee_mb_white.png" />
-          </a>
-        </div>
+	return (
+		<footer className="footer">
+			<div className="container flex flex-col md:flex-row items-center justify-center gap-12">
+				<div className="footer-logo">
+					<a href="https://ieee.org" target="_blank">
+						<img src="/ieee_mb_white.png" />
+					</a>
+				</div>
 
 				<div className="footer-nav">
 					<a href="/about">About Us</a>
@@ -57,7 +57,7 @@ function Footer() {
 					aria-label="Facebook"
 					className="facebook"
 				>
-					<img src="facebook.png" alt="Facebook" />
+					<img src="2023_Facebook_icon.svg" alt="Facebook" />
 				</a>
 			</div>
 
