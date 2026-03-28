@@ -71,11 +71,15 @@ async function EventCard({ event }: { event?: EventData }) {
 export default async function Events() {
 	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
 
-	const DBevents = await pb.collection("events").getList(1, 5, {
-		sort: "-when",
+	const DBevents = await pb.collection("events").getList(0, 50, {
+		sort: "when",
 	});
 
-	const events = DBevents.items.map((event) => {
+	const filteredEvents = DBevents.items.filter(
+		(event) => event.when && Date.parse(event.when) > Date.now(),
+	);
+
+	const events = filteredEvents.map((event) => {
 		let newevent: EventData = {
 			id: event["id"] as string,
 			title: event["title"] as string,
@@ -148,12 +152,12 @@ export default async function Events() {
 					<EventCard event={mainEvent} />
 				</div>
 				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
-					<EventCard event={events[1]} />
-					<EventCard event={events[2]} />
+					{events[1] && <EventCard event={events[1]} />}
+					{events[2] && <EventCard event={events[2]} />}
 				</div>
 				<div className="container flex lg:justify-evenly max-lg:flex-col items-center">
-					<EventCard event={events[3]} />
-					<EventCard event={events[4]} />
+					{events[3] && <EventCard event={events[3]} />}
+					{events[4] && <EventCard event={events[4]} />}
 				</div>
 			</AngledRectangle>
 			<div className={styles.compLine} />
