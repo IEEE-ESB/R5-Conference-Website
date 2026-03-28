@@ -87,11 +87,15 @@ function LeadershipCard({
 export default async function Home() {
 	const baseFileURL = "https://db.ieee-esb.org/api/files/events/";
 
-	const DBevents = await pb.collection("events").getList(1, 3, {
-		sort: "-when",
+	const DBevents = await pb.collection("events").getList(1, 50, {
+		sort: "when",
 	});
 
-	const events = DBevents.items.map((event) => {
+	const filteredEvents = DBevents.items.filter(
+		(event) => event.when && Date.parse(event.when) > Date.now(),
+	);
+
+	const events = filteredEvents.map((event) => {
 		let newevent: EventData = {
 			id: event["id"] as string,
 			title: event["title"] as string,
