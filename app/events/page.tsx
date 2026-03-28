@@ -196,8 +196,8 @@ export default async function Events() {
 							src="region-5.webp"
 						/>
 						<ul className={styles.r5date}>
-							<li>Date: April 4-6, 2025</li>
-							<li>Location: Witchita, Kansas</li>
+							<li>Date: April 27-29, 2026</li>
+							<li>Location: Boulder, Colorado</li>
 							<li>Region: IEEE Region 5 - Central U.S.</li>
 						</ul>
 						<p>
